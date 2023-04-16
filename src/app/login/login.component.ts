@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+
+  ngOnInit() {
+
+  }
+
+  login() {
+    console.log("login");
+  
+  }
+
 }

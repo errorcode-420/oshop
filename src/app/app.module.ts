@@ -12,9 +12,10 @@ import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
 //import  firebase
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { firebaseConfig } from './firebase/firebaseConfig'
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from './environment/environment';
+import { getAuth } from "firebase/auth";
 
 
 //import components
@@ -63,7 +64,7 @@ const routes: Routes = [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes), // Importiere das RouterModule.forRoot und füge das routes-Array hinzu
-    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
