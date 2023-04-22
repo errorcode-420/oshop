@@ -1,0 +1,149 @@
+<div class="row">
+	<div class="col-md-6">
+		<form [formGroup]="productForm" (ngSubmit)="save(product)">
+			<div class="form-row align-items-center">
+				<div class="col-auto">
+					<label class="sr-only" for="inlineFormInput">Title</label>
+					<input
+						#title
+						formControlName="title" 
+						[(ngModel)]="product.title"
+						type="text" 
+						class="form-control mb-2" 
+						id="inlineFormInput" 
+						placeholder="Green Tea"/>
+
+					<div
+						*ngIf="fc['title'].invalid && fc['title'].touched"
+						class="alert alert-danger">
+						<div *ngIf="fc['title'].errors?.['required']">
+							Title is required.
+						</div>
+					</div>
+				</div>
+
+				<div class="col-auto">
+					<label class="sr-only" for="inlineFormInputGroup">Price</label>
+					<div class="input-group mb-2">
+						<div class="input-group-prepend">
+							<div class="input-group-text">€</div>
+						</div>
+						<input
+							#price
+							formControlName="price"
+							[(ngModel)]="product.price"
+							type="text"
+							class="form-control mb-2"
+							id="inlineFormInputGroup"
+							placeholder="Price"
+							aria-describedby="inlineFormInputGroupHelp"
+							type="text"
+							class="form-control"
+							id="inlineFormInputGroup"
+							placeholder="4.20€"
+							required [min]="0"/>
+					</div>
+
+					<div
+						*ngIf="fc['price'].invalid && fc['price'].touched"
+						class="alert alert-danger">
+						<div *ngIf="fc['price'].errors?.['required']">
+							Price is required.
+						</div>
+
+						<div *ngIf="fc['price'].errors?.['pattern']">
+							Price should be 0 or higher.
+						</div>
+					</div>
+				</div>
+
+				<div class="col-auto">
+					<label class="sr-only" for="inlineFormInput">Category</label>
+					<select
+						#category
+						[(ngModel)]="product.category"
+						formControlName="category"							
+						class="form-control"
+						id="inlineFormInput"
+						required
+						formControlName="category"
+						class="form-control mb-2"
+						id="inlineFormCustomSelect">
+						<option selected value="0">Choose...</option>
+						<option *ngFor="let c of categories$ | async" [value]="c.id">{{ c.name }} </option>
+					</select>
+
+					<div
+						*ngIf="fc['category'].invalid && fc['category'].touched"
+						class="alert alert-danger">
+						<div *ngIf="fc['category'].errors?.['required']">
+							Category is required.
+						</div>
+					</div>
+				</div>
+
+				<div class="col-auto">
+					<label
+						class="sr-only"
+						for="inlineFormInput">
+						Image URL
+               </label>
+					<input
+						#url						
+						[(ngModel)]="product.url"
+						formControlName="url"
+						type="text"
+						class="form-control mb-2"
+						id="inlineFormInput"
+						placeholder="https://www.example.com/api/example.com"
+						aria-describedby="inlineFormInputHelp"
+						formControlName="url"
+						type="text"
+						class="form-control mb-2"
+						id="inlineFormInput"
+						placeholder="C:\Users\user\Pictures\image.png"
+						url/>
+
+					<div
+						*ngIf="fc['url'].invalid && fc['url'].touched"
+						class="alert alert-danger">
+						<div *ngIf="fc['url'].errors?.['required']">
+							Image URL is required.
+						</div>
+						<div *ngIf="fc['url'].errors?.['url']">
+							Please enter valid URL.
+						</div>
+					</div>
+				</div>
+
+				<div class="col-auto">
+					<button
+						type="submit"
+						class="btn btn-primary mb-2">
+						Save
+            		</button>	
+					<button
+					    (click)="delete(product)"
+						type="button"
+						class="btn btn-danger mb-2">
+						Delete
+            		</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card" style="width: 18rem;">             
+			<img
+				*ngIf="product.url"
+				class="card-img-top"
+				[src]="product.url"
+				alt="Card image cap" />
+				<div class="card-body">
+					<h5 class="card-title">{{ product.title}}</h5>
+					<p class="card-text">{{ product.price | currency: '€': true }}</p>
+				</div>
+		</div>
+	</div>
+</div>
