@@ -1,9 +1,10 @@
 //import core modules
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule, NgModel } from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation'
+import { DataTablesModule } from 'angular-datatables';
 
 //import component modules
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
@@ -28,22 +29,37 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './login/login.component';
 import { AngularFireModule } from '@angular/fire/compat';
-import { DatabaseTestComponent } from './database-test/database-test.component';
-import { AuthService } from './services/auth.service';
-import { AuthGuardService } from './services/auth-guard.service';
-import { UserService } from './services/user.service';
-import { AdminAuthGuardService } from './services/admin-auth-guard.service';
+import { AuthService } from './services/authentication/auth.service';
+import { AuthGuardService } from './services/authentication/auth-guard.service';
+import { UserService } from './services/data/user.service';
+import { AdminAuthGuardService } from './services/authentication/admin-auth-guard.service';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
-import { CategoryService } from './services/category.service';
-import { ProductService } from './services/product.service';
+import { CategoryService } from './services/data/category.service';
+import { ProductService } from './services/data/product.service';
+import { DataTransformerService } from './services/data-transformer.service';
+
+
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { CommonModule } from '@angular/common';
+import { TableComponent } from './table/table.component';
+import { FakeService } from './services/data/fake.service';
+
 
 // Definiere die Pfade und Komponentennamen für die Routing-Module
 const routes: Routes = [
   
+  { path: '', component: TableComponent },//test table
+
   { path: '', component: HomeComponent },
   { path: 'products', component: ProductsComponent},
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'login', component: LoginComponent },
+
+  //test table
+  { path: 'table', component: TableComponent },
 
   { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuardService] }, 
   { path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuardService] }, 
@@ -84,8 +100,7 @@ const routes: Routes = [
     AdminProductsComponent,
     AdminOrdersComponent,
     LoginComponent,
-    DatabaseTestComponent,
-    ProductFormComponent
+    ProductFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -99,20 +114,33 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    //CustomFormsModule
 
+
+    //test table
+    DataTablesModule,
+    MatTableModule,
+    MatInputModule,
+    MatSortModule,
+    CommonModule,
+    MatSortModule
     
 
 
   ],
   providers: [
     AuthService,
-    AuthGuardService,
-    AdminAuthGuardService,
     UserService,
     CategoryService,
-    ProductService
+    ProductService,
+    DataTransformerService,
+
+    //test table
+    FakeService
+
+
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+
 })
 export class AppModule { }

@@ -1,4 +1,10 @@
+
+
+
 <div class="row">
+
+{{categories |json}}
+
 	<div class="col-md-6">
 		<form [formGroup]="productForm" (ngSubmit)="save(product)">
 			<div class="form-row align-items-center">
@@ -37,9 +43,6 @@
 							id="inlineFormInputGroup"
 							placeholder="Price"
 							aria-describedby="inlineFormInputGroupHelp"
-							type="text"
-							class="form-control"
-							id="inlineFormInputGroup"
 							placeholder="4.20€"
 							required [min]="0"/>
 					</div>
@@ -64,14 +67,14 @@
 						[(ngModel)]="product.category"
 						formControlName="category"							
 						class="form-control"
-						id="inlineFormInput"
 						required
 						formControlName="category"
-						class="form-control mb-2"
 						id="inlineFormCustomSelect">
 						<option selected value="0">Choose...</option>
-						<option *ngFor="let c of categories$ | async" [value]="c.id">{{ c.name }} </option>
+						<option *ngFor="let c of categories">{{c.name}}</option>
 					</select>
+
+			
 
 					<div
 						*ngIf="fc['category'].invalid && fc['category'].touched"
@@ -97,11 +100,6 @@
 						id="inlineFormInput"
 						placeholder="https://www.example.com/api/example.com"
 						aria-describedby="inlineFormInputHelp"
-						formControlName="url"
-						type="text"
-						class="form-control mb-2"
-						id="inlineFormInput"
-						placeholder="C:\Users\user\Pictures\image.png"
 						url/>
 
 					<div

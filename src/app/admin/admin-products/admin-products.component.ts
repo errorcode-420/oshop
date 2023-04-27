@@ -1,7 +1,8 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Observable, Subscription, map } from 'rxjs';
 import { Product } from 'src/app/models/product';
-import { ProductService } from 'src/app/services/product.service';
+import { ProductService } from 'src/app/services/data/product.service';
+import { DataTransformerService } from 'src/app/services/data-transformer.service';
 
 @Component({
   selector: 'app-admin-products',
@@ -10,73 +11,47 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class AdminProductsComponent implements OnDestroy {
 
-  subscription: Subscription;
+  subscriptions: Subscription[] = [];
   products: Product[] = [];
   filteredProducts?: Product[];
   currentProduct!: Product;
 
 
-  constructor(private productService: ProductService) { 
-    this.subscription = this.productService.getAll().valueChanges()
-      .subscribe(products => this.filteredProducts = this.products = products);
+  //entfernen test
+  dtOptions: any;
+
+
+  constructor(private productService: ProductService, private transformer: DataTransformerService) { 
+
+    this.retrieveProducts()
+
   }
 
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-  }
-
-
-  ngOnInit(): void {
-    this.getProducts();
-    this.currentProduct ={...this.currentProduct };
-  }
-
-
-
-  getProducts(): void {
-    this.productService.getAll().snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c =>
-          ({ id: c.payload.key, ...c.payload.val() }) //entfernen Code verstehen
-        )
-      )
-    ).subscribe(data => {
-      // this.products = data as Product[];
-
-      //entfernen
-      console.log("getProducts");
-      console.log(this.products);
+    this.subscriptions.forEach((subscription: Subscription) => {
+      subscription.unsubscribe();
     });
   }
 
+
+  retrieveProducts(): void {
+
+    const productList = this.productService.getAll();
+    const products$ = this.transformer.toObservable(productList);
+    const sub: Subscription =  products$.subscribe(data => {
+      this.filteredProducts = this.products = data;
+    });
+    this.subscriptions.push(sub);
+  }
+
+
   filter(query: string) {
-
-      //entfernen
-      console.log("products 1");
-      console.log(this.products);
-      console.log(this.filteredProducts);
-
-
     this.filteredProducts = (query) ?
       this.products.filter(p => {
-              //entfernen
-      console.log("products 2");
-      console.log(this.products);
-      console.log(this.filteredProducts);
-      console.log("------------------------------------");
-
-        p.title.toLowerCase().includes(query.toLowerCase())
+        return p.title.toLowerCase().includes(query.toLowerCase())
       }) :
       this.products;
-
-
-      //entfernen
-      console.log("products 3");
-      console.log(this.products);
-      console.log(this.filteredProducts);
-      console.log("------------------------------------");
-
   }
 
 

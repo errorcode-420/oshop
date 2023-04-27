@@ -7,6 +7,10 @@
     </button>
 </div>
 
+
+<table-basic-example></table-basic-example>//entfernen test
+
+
 <input
     #query
     (keyup)="filter(query.value)"
@@ -14,20 +18,21 @@
     class="form-control"
     placeholder="Search...">
 
+    <data-table></data-table>
+
 <table class="table">
     <thead>
         <tr>
             <th scope="col">Title</th>
+            <th scope="col">Category</th>
             <th scope="col">Price</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let p of filteredProducts">
-            //entfernen
-            <td>{{p|json}}</td>
-            //entfernen
             <td>{{ p.title }}</td>
+            <td>{{ p.category }}</td>
             <td>{{ p.price }}</td>
             <td>
                 <a [routerLink]="['/admin/products', p.id]">Edit</a>

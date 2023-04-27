@@ -1,13 +1,15 @@
 import { Component, OnDestroy } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, NgForm, NgModel, ValidatorFn, Validators } from '@angular/forms';
-import { ProductService } from 'src/app/services/product.service';
-import { CategoryService } from 'src/app/services/category.service';
+import { ProductService } from 'src/app/services/data/product.service';
+import { CategoryService } from 'src/app/services/data/category.service';
 import { CustomValidators } from 'ng2-validation';
 import { ActivatedRoute, Router } from '@angular/router';
-import { take } from 'rxjs/operators';
+import { map, take } from 'rxjs/operators';
 import { Product } from 'src/app/models/product';
 import { Subscription } from 'rxjs';
-
+import { Category } from 'src/app/models/category';
+import { AuthService } from 'src/app/services/authentication/auth.service';
+import { DataTransformerService } from '../../services/data-transformer.service'
 
 @Component({
   selector: 'product-form',
@@ -15,34 +17,50 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./product-form.component.css']
 })
 export class ProductFormComponent implements OnDestroy {
+
   ngOnDestroy(): void {
-    if (this.productSubscription) {
-      this.productSubscription.unsubscribe();
-    }
+    this.subscriptions.forEach((subscription: Subscription) => {
+      subscription.unsubscribe();
+    });
   }
 
-  categories$;
-  productForm!: FormGroup;
-  submitted = false;
-  private productSubscription!: Subscription;
-  product: any = {};
-  id: string;
 
-  constructor(
-      private router: Router,
-      private route: ActivatedRoute,
-      private categoryService: CategoryService,
-      private fb: FormBuilder,
-      private productService: ProductService,
-    ){
-      this.categories$ = categoryService.getCategories();
-      this.id = this.route.snapshot.params['key'];
-      if (this.id) {    
-        this.getCurrentProduct(this.id);
-      }
-      this.createProductForm();
+
+  subscriptions: Subscription[] = [];
+  categories: Category[] = []; 
+  productForm!: FormGroup;
+  product: any = {};
+  id!: string;
+
+  constructor
+  (
+    private router: Router,
+    private route: ActivatedRoute,
+    private categoryService: CategoryService,
+    private fb: FormBuilder,
+    private productService: ProductService,
+    private transformer: DataTransformerService
+  ){this.constructorFunction()}
+
+  private constructorFunction(){
+    this.retrieveCategories();
+    this.id = this.route.snapshot.params['key'];
+    if (this.id) {    
+      this.retrieveCurrentProduct(this.id);
     }
+    this.createProductForm();
+  }
   
+    
+  retrieveCategories(): void {
+
+    const categoryList = this.categoryService.getAll();
+    const categories$ = this.transformer.toObservable(categoryList);
+    const sub =  categories$.subscribe(data => {
+      this.categories = data;
+    })
+    this.subscriptions.push(sub);
+  }
 
   createProductForm(){
     this.productForm = this.fb.group({
@@ -54,7 +72,7 @@ export class ProductFormComponent implements OnDestroy {
   }
 
   save(product: Product) {
-    //const product = this.productForm.value;
+    
     if(this.id) this.productService.update(this.id, product);
     else this.productService.create(product);
 
@@ -69,19 +87,9 @@ export class ProductFormComponent implements OnDestroy {
     
   }
 
-  getCurrentProduct(id: string) {
-
-    
-    console.log("id");
-    console.log(id);
-
-    this.productService.getById(id).valueChanges().subscribe(
-      (product: Product | null) => {
-        if (product) {
-          this.product = product;
-        }
-      }
-    );
+  retrieveCurrentProduct(id: string) {
+    const sub = this.productService.getById(id).valueChanges().subscribe(product=> this.product = product);
+    this.subscriptions.push(sub);
   }
 
   //get form-controls
