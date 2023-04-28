@@ -71,7 +71,7 @@
 						formControlName="category"
 						id="inlineFormCustomSelect">
 						<option selected value="0">Choose...</option>
-						<option *ngFor="let c of categories">{{c.name}}</option>
+						<option *ngFor="let c of categories" value="{{c.id}}">{{c.name}}</option>
 					</select>
 
 			

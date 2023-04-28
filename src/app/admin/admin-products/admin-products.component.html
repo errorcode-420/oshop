@@ -7,8 +7,36 @@
     </button>
 </div>
 
+<mat-card>
+    <mat-card-header></mat-card-header>
+    <mat-card-content>
+        <table matSort mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-<table-basic-example></table-basic-example>//entfernen test
+            <ng-container matColumnDef="title">
+              <th mat-sort-header mat-header-cell *matHeaderCellDef>Title</th>
+              <td mat-cell *matCellDef="let element">{{element.title}}</td>
+            </ng-container>   
+        
+            <ng-container matColumnDef="price">
+            <th mat-sort-header mat-header-cell *matHeaderCellDef>Price</th>
+            <td mat-cell *matCellDef="let element">{{element.price}}</td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row;columns:displayedColumns"></tr>
+        
+        </table>
+
+        
+    </mat-card-content>
+
+    <mat-card-footer>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+    </mat-card-footer>
+
+</mat-card>
+
+
 
 
 <input
@@ -32,7 +60,6 @@
     <tbody>
         <tr *ngFor="let p of filteredProducts">
             <td>{{ p.title }}</td>
-            <td>{{ p.category }}</td>
             <td>{{ p.price }}</td>
             <td>
                 <a [routerLink]="['/admin/products', p.id]">Edit</a>

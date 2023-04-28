@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { UserService } from './user.service';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, map, take } from 'rxjs';
 import { AngularFireDatabase, AngularFireList, QueryFn } from '@angular/fire/compat/database';
 import { Category } from '../../models/category';
 import { Product } from '../../models/product';
@@ -25,6 +25,4 @@ export class CategoryService {
   getAll(): AngularFireList<Category> {
     return this.productsRef;
   }  
-  
-  
 }

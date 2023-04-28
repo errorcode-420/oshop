@@ -58,6 +58,10 @@ export class ProductFormComponent implements OnDestroy {
     const categories$ = this.transformer.toObservable(categoryList);
     const sub =  categories$.subscribe(data => {
       this.categories = data;
+
+      //entfernen
+      console.log("categories");
+      console.log(this.categories);
     })
     this.subscriptions.push(sub);
   }
@@ -72,7 +76,9 @@ export class ProductFormComponent implements OnDestroy {
   }
 
   save(product: Product) {
-    
+    //entfernen 
+    console.log("save product");
+    console.log(product);
     if(this.id) this.productService.update(this.id, product);
     else this.productService.create(product);
 

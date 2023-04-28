@@ -44,22 +44,22 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { CommonModule } from '@angular/common';
-import { TableComponent } from './table/table.component';
 import { FakeService } from './services/data/fake.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TestTableComponent } from './test-table/test-table.component';
 
 
 // Definiere die Pfade und Komponentennamen für die Routing-Module
 const routes: Routes = [
   
-  { path: '', component: TableComponent },//test table
 
+  { path: '', component: TestTableComponent },//entfernen
   { path: '', component: HomeComponent },
   { path: 'products', component: ProductsComponent},
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'login', component: LoginComponent },
 
   //test table
-  { path: 'table', component: TableComponent },
 
   { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuardService] }, 
   { path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuardService] }, 
@@ -101,6 +101,7 @@ const routes: Routes = [
     AdminOrdersComponent,
     LoginComponent,
     ProductFormComponent,
+    TestTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -122,7 +123,8 @@ const routes: Routes = [
     MatInputModule,
     MatSortModule,
     CommonModule,
-    MatSortModule
+    MatSortModule,
+    BrowserAnimationsModule
     
 
 
