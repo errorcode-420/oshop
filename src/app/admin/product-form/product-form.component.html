@@ -1,9 +1,8 @@
 
 
 
-<div class="row">
-
-{{categories |json}}
+<div class="row" *ngIf="product">
+	
 
 	<div class="col-md-6">
 		<form [formGroup]="productForm" (ngSubmit)="save(product)">
@@ -70,7 +69,6 @@
 						required
 						formControlName="category"
 						id="inlineFormCustomSelect">
-						<option selected value="0">Choose...</option>
 						<option *ngFor="let c of categories" value="{{c.id}}">{{c.name}}</option>
 					</select>
 
@@ -90,56 +88,63 @@
 						class="sr-only"
 						for="inlineFormInput">
 						Image URL
-               </label>
+					</label>
 					<input
-						#url						
-						[(ngModel)]="product.url"
-						formControlName="url"
+						#imageUrl						
+						[(ngModel)]="product.imageUrl"
+						formControlName="imageUrl"
 						type="text"
 						class="form-control mb-2"
 						id="inlineFormInput"
 						placeholder="https://www.example.com/api/example.com"
 						aria-describedby="inlineFormInputHelp"
-						url/>
+						/>
 
 					<div
-						*ngIf="fc['url'].invalid && fc['url'].touched"
+						*ngIf="fc['imageUrl'].invalid && fc['imageUrl'].touched"
 						class="alert alert-danger">
-						<div *ngIf="fc['url'].errors?.['required']">
+						<div *ngIf="fc['imageUrl'].errors?.['required']">
 							Image URL is required.
 						</div>
-						<div *ngIf="fc['url'].errors?.['url']">
+						<div *ngIf="fc['imageUrl'].errors?.['imageUrl']">
 							Please enter valid URL.
 						</div>
 					</div>
 				</div>
 
 				<div class="col-auto">
-					<button
-						type="submit"
-						class="btn btn-primary mb-2">
-						Save
-            		</button>	
-					<button
-					    (click)="delete(product)"
-						type="button"
-						class="btn btn-danger mb-2">
-						Delete
-            		</button>
+				
+				
+					<!-- Icon für "Änderungen Speichern" - Vorschlag 1 -->
+					<button mat-icon-button color="primary" matTooltip="Save">
+						<mat-icon>done</mat-icon>
+					</button>
+					
+					<button mat-icon-button (click)="delete(product.id)" matTooltip="Delete">
+						<mat-icon
+							style="color: #B71C1C">
+							delete
+						</mat-icon>
+					</button>
+					
+
+
 				</div>
 			</div>
 		</form>
 	</div>
 
-	<div class="col-md-6">
-		<div class="card" style="width: 18rem;">             
+	<div class="col-md-6" *ngIf="product.title">
+		<div class="card" style="width: 18rem;">    
+			
 			<img
-				*ngIf="product.url"
+				*ngIf="product.imageUrl"
 				class="card-img-top"
-				[src]="product.url"
+				[src]="product.imageUrl"
 				alt="Card image cap" />
 				<div class="card-body">
-					<h5 class="card-title">{{ product.title}}</h5>
+					<h2 class="card-title">{{ product.title}}</h2>
+					<p class="card-text">{{ product.category}}</p>
 					<p class="card-text">{{ product.price | currency: '€': true }}</p>
 				</div>
 		</div>

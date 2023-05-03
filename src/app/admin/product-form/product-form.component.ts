@@ -57,11 +57,7 @@ export class ProductFormComponent implements OnDestroy {
     const categoryList = this.categoryService.getAll();
     const categories$ = this.transformer.toObservable(categoryList);
     const sub =  categories$.subscribe(data => {
-      this.categories = data;
-
-      //entfernen
-      console.log("categories");
-      console.log(this.categories);
+      this.categories = data;      
     })
     this.subscriptions.push(sub);
   }
@@ -71,7 +67,7 @@ export class ProductFormComponent implements OnDestroy {
       title: ['', Validators.required],
       price: ['', [Validators.required, Validators.pattern(/^[0-9]+(\.[0-9]{1,2})?$/)]],
       category: ['', Validators.required],
-      url: ['', [Validators.required, Validators.minLength(6), CustomValidators.url]],
+      imageUrl: ['', [Validators.required, Validators.minLength(6), CustomValidators.url]],
     });
   }
 
@@ -85,22 +81,28 @@ export class ProductFormComponent implements OnDestroy {
     this.router.navigate(['admin/products']);
   }
 
-  delete(product: Product) {
+  delete(id: string) {
     if (!confirm('Are you sure you want to delete this product?')) return;
     
-    this.productService.delete(this.id);
-    this.router.navigate(['admin/products']);
-    
+    this.productService.delete(id);
+      this.router.navigate(['admin/products']);
+      setTimeout(() => { this.productService.delete(id)}, 500)
   }
 
   retrieveCurrentProduct(id: string) {
-    const sub = this.productService.getById(id).valueChanges().subscribe(product=> this.product = product);
-    this.subscriptions.push(sub);
+    const sub = this.productService.getById(id).valueChanges().subscribe(product=> {
+      if(!product) return;
+
+      this.product = product;
+      this.product.id = id;
+    });
+
+    this.subscriptions.push(sub);    
   }
 
   //get form-controls
   get fc(): { [key: string]: AbstractControl } {
-    return this.productForm.controls;
+    return this.productForm.controls; 
   }
   
 }

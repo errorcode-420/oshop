@@ -7,6 +7,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { CategoryService } from 'src/app/services/data/category.service';
 import { MatPaginator } from '@angular/material/paginator';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-products',
@@ -17,27 +18,24 @@ export class AdminProductsComponent implements OnDestroy {
 
   subscriptions: Subscription[] = [];
   products: Product[] = [];
-  filteredProducts?: Product[];
 
   //new table
   dataSource: any;
-  displayedColumns: string[] = ['title', 'price'];
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  displayedColumns: string[] = ['title', 'price', 'actions'];
   @ViewChild(MatSort) sort!: MatSort;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
   
   currentProduct!: Product;
 
 
-  //entfernen test
-  dtOptions: any;
-
-
-  constructor
-  (
+  constructor(
     private productService: ProductService, 
     private transformer: DataTransformerService,
-    private categoryService: CategoryService
-  ){this.retrieveProducts()}
+    private categoryService: CategoryService,
+    private router: Router
+  ) { 
+    this.retrieveProducts()
+  }
 
 
   ngOnDestroy(): void {
@@ -52,31 +50,35 @@ export class AdminProductsComponent implements OnDestroy {
     const productList = this.productService.getAll();
     const products$ = this.transformer.toObservable(productList);
     const sub: Subscription =  products$.subscribe(data => {
-      this.filteredProducts = this.products = data;
-
-
-      //entfernen test
-      console.log("this.filteredProducts");
-      console.log(this.filteredProducts);
-
-      //new table
-      this.dataSource = new MatTableDataSource<Product>(this.filteredProducts);
+      this.products = data;      
+      this.dataSource = new MatTableDataSource<Product>(this.products);
       this.dataSource.paginator = this.paginator;
-
-      this.dataSource.sort=this.sort;
-
+      this.dataSource.sort = this.sort;
     });
     this.subscriptions.push(sub);
   }
 
- 
-  filter(query: string) {
-    this.filteredProducts = (query) ?
-      this.products.filter(p => {
-        return p.title.toLowerCase().includes(query.toLowerCase())
-      }) :
-      this.products;
+
+  filter(event: Event) {
+    const filvalue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filvalue;
+
+    console.log("dataSource")
+    console.log(this.dataSource)
+    console.log(filvalue)
+  }
+
+  edit(id: string) {
+    this.router.navigate(['/admin/products', id]);
+  }
+
+  delete(id: string) {
+    if (!confirm('Are you sure you want to delete this product?')) return;
+    
+    this.router.navigate(['admin/products']);
+    this.productService.delete(id);
   }
 
 
+  
 }

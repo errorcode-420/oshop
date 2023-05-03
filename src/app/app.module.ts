@@ -39,6 +39,8 @@ import { ProductService } from './services/data/product.service';
 import { DataTransformerService } from './services/data-transformer.service';
 
 
+import {MatIconModule} from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
@@ -46,14 +48,16 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { CommonModule } from '@angular/common';
 import { FakeService } from './services/data/fake.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TestTableComponent } from './test-table/test-table.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { ProductFilterComponent } from './products/product-filter/product-filter.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 
 // Definiere die Pfade und Komponentennamen für die Routing-Module
 const routes: Routes = [
   
 
-  { path: '', component: TestTableComponent },//entfernen
+  { path: '', component: ProductsComponent },//entfernen
   { path: '', component: HomeComponent },
   { path: 'products', component: ProductsComponent},
   { path: 'shopping-cart', component: ShoppingCartComponent },
@@ -101,7 +105,9 @@ const routes: Routes = [
     AdminOrdersComponent,
     LoginComponent,
     ProductFormComponent,
-    TestTableComponent,
+    ProductFilterComponent,
+    ProductCardComponent
+
   ],
   imports: [
     BrowserModule,
@@ -124,7 +130,11 @@ const routes: Routes = [
     MatSortModule,
     CommonModule,
     MatSortModule,
-    BrowserAnimationsModule
+    MatPaginatorModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTooltipModule,
+    BrowserAnimationsModule,
     
 
 

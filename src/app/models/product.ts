@@ -1,8 +1,8 @@
 export interface Product {
     payload: any;
-    id: number;
+    id: string;
     title: string;
     price: number;
-    url: string;
+    imageUrl: string;
     category: string
   }
