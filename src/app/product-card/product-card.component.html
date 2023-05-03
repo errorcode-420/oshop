@@ -1,1 +1,14 @@
-<p>product-card works!</p>
+<div *ngIf="product as p" class="card">
+    <div *ngIf="p.title">
+        <img class="card-img-top" src="{{p.imageUrl}}" alt="{{p.title}}">
+        <div class="card-body">
+            <h2 class="card-title">{{p.title}}</h2>
+            <p class="card-text">{{ p.price | currency: '€': true }}</p>
+        </div>
+        <div class="card-footer d-flex justify-content-end">
+            <a *ngIf="showActions" class="btn btn-primary flex-grow-1">Add to cart</a>
+        </div>
+    </div>       
+</div>
+
+

@@ -23,7 +23,6 @@ export class ProductsComponent {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService, 
-    private categoryService: CategoryService,
     private transformer: DataTransformerService
   ) 
   {

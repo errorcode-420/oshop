@@ -112,7 +112,8 @@
 					</div>
 				</div>
 
-				<div class="col-auto">
+				<!-- <div class="col-auto"> -->
+				<div class="col-md-6">
 				
 				
 					<!-- Icon für "Änderungen Speichern" - Vorschlag 1 -->
@@ -134,19 +135,8 @@
 		</form>
 	</div>
 
-	<div class="col-md-6" *ngIf="product.title">
-		<div class="card" style="width: 18rem;">    
-			
-			<img
-				*ngIf="product.imageUrl"
-				class="card-img-top"
-				[src]="product.imageUrl"
-				alt="Card image cap" />
-				<div class="card-body">
-					<h2 class="card-title">{{ product.title}}</h2>
-					<p class="card-text">{{ product.category}}</p>
-					<p class="card-text">{{ product.price | currency: '€': true }}</p>
-				</div>
-		</div>
+	<div class="col-md-3" *ngIf="product.title">
+		<product-card [product]="product" [show-actions]="false"></product-card>
+
 	</div>
 </div>
