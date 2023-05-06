@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { Subscription } from 'rxjs';
 import { Category } from 'src/app/models/category';
-import { DataTransformerService } from '../../services/data-transformer.service'
+import { DataTransformerService } from '../../services/helpers/data-transformer.service'
 
 @Component({
   selector: 'product-form',

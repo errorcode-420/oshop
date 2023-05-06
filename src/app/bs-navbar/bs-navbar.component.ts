@@ -15,7 +15,6 @@ export class BsNavbarComponent {
 
   subscriptions: Subscription[] = [];
   appUser!: AppUser | null;
-  // itemCount!: number;
   cart!: any
   quantityTotal: number = 0;
 

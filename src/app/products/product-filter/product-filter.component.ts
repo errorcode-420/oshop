@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Category } from 'src/app/models/category';
-import { DataTransformerService } from 'src/app/services/data-transformer.service';
+import { DataTransformerService } from 'src/app/services/helpers/data-transformer.service';
 import { CategoryService } from 'src/app/services/data/category.service';
 
 @Component({

@@ -1,13 +1,13 @@
 import { Component, OnDestroy, ViewChild } from '@angular/core';
-import { Observable, Subscription, map } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/data/product.service';
-import { DataTransformerService } from 'src/app/services/data-transformer.service';
+import { DataTransformerService } from 'src/app/services/helpers/data-transformer.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
-import { CategoryService } from 'src/app/services/data/category.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-admin-products',
@@ -18,8 +18,6 @@ export class AdminProductsComponent implements OnDestroy {
 
   subscriptions: Subscription[] = [];
   products: Product[] = [];
-
-  //new table
   dataSource: any;
   displayedColumns: string[] = ['title', 'price', 'actions'];
   @ViewChild(MatSort) sort!: MatSort;
@@ -31,7 +29,6 @@ export class AdminProductsComponent implements OnDestroy {
   constructor(
     private productService: ProductService, 
     private transformer: DataTransformerService,
-    private categoryService: CategoryService,
     private router: Router
   ) { 
     this.retrieveProducts()
@@ -42,6 +39,8 @@ export class AdminProductsComponent implements OnDestroy {
     this.subscriptions.forEach((subscription: Subscription) => {
       subscription.unsubscribe();
     });
+
+    this
   }
 
 
@@ -79,6 +78,7 @@ export class AdminProductsComponent implements OnDestroy {
     this.productService.delete(id);
   }
 
+  
 
   
 }

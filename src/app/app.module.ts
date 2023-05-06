@@ -35,7 +35,7 @@ import { CategoryService } from './services/data/category.service';
 import { ProductService } from './services/data/product.service';
 import { ShoppingCartService } from './services/data/shopping-cart.service';
 
-import { DataTransformerService } from './services/data-transformer.service';
+import { DataTransformerService } from './services/helpers/data-transformer.service';
 
 
 import {MatIconModule} from '@angular/material/icon';
@@ -49,6 +49,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { SubscriptionService } from './services/helpers/subscription.service';
 
 
 // Definiere die Pfade und Komponentennamen für die Routing-Module
@@ -141,6 +142,7 @@ const routes: Routes = [
     ProductService,
     DataTransformerService,
     ShoppingCartService,
+    SubscriptionService
 
 
   ],

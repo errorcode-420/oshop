@@ -1,12 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProductService } from '../services/data/product.service';
 import { Subscription, of, switchMap } from 'rxjs';
 import { Product } from '../models/product';
-import { DataTransformerService } from '../services/data-transformer.service';
-import { Category } from '../models/category';
-import { CategoryService } from '../services/data/category.service';
+import { DataTransformerService } from '../services/helpers/data-transformer.service';
 import { ActivatedRoute } from '@angular/router';
-import { ShoppingCart } from '../models/shopping-cart';
 import { ShoppingCartService } from '../services/data/shopping-cart.service';
 
 @Component({
