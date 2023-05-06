@@ -2,17 +2,14 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule, ReactiveFormsModule, NgModel } from '@angular/forms';
-import { CustomFormsModule } from 'ng2-validation'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataTablesModule } from 'angular-datatables';
 
 //import component modules
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 //import firebase
-import { provideDatabase, getDatabase } from '@angular/fire/database';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from './environment/environment';
 
@@ -36,17 +33,18 @@ import { AdminAuthGuardService } from './services/authentication/admin-auth-guar
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { CategoryService } from './services/data/category.service';
 import { ProductService } from './services/data/product.service';
+import { ShoppingCartService } from './services/data/shopping-cart.service';
+
 import { DataTransformerService } from './services/data-transformer.service';
 
 
 import {MatIconModule} from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { CommonModule } from '@angular/common';
-import { FakeService } from './services/data/fake.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
@@ -57,8 +55,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 const routes: Routes = [
   
 
-  { path: '', component: ProductsComponent },//entfernen
-  { path: '', component: HomeComponent },
+  { path: '', component: ProductsComponent },
   { path: 'products', component: ProductsComponent},
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'login', component: LoginComponent },
@@ -113,8 +110,6 @@ const routes: Routes = [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
-    // provideFirebaseApp(() => initializeApp(environment.firebase)),
-    // provideDatabase(() => getDatabase()),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     NgbDropdownModule,
@@ -145,9 +140,7 @@ const routes: Routes = [
     CategoryService,
     ProductService,
     DataTransformerService,
-
-    //test table
-    FakeService
+    ShoppingCartService,
 
 
   ],

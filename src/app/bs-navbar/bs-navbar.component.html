@@ -8,9 +8,15 @@
       <ul class="navbar-nav mr-auto">
         
         <li class="nav-item">
-          <a class="nav-link" routerLink="/shopping-cart">Shopping Cart</a>
+          <a class="nav-link" routerLink="/shopping-cart">
+            <mat-icon>shopping_cart</mat-icon>
+            <span
+              *ngIf="quantityTotal"
+              class="badge badge-pill badge-primary ml-1">
+              {{quantityTotal}}
+            </span>
+          </a>
         </li>
-
         <ng-template #anonymousUser>
           <li class="nav-item">
             <a class="nav-link" routerLink="/login">Login <span class="sr-only"></span></a>

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ShoppingCartService } from '../services/data/shopping-cart.service';
+import { Product } from '../models/product';
+import { ShoppingCart } from '../models/shopping-cart';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -7,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class ShoppingCartComponent {
 
+  constructor(private shoppingCartService: ShoppingCartService) {
+
+  }
+
+ 
 }

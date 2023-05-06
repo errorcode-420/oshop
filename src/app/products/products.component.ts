@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProductService } from '../services/data/product.service';
-import { Subscription, switchMap } from 'rxjs';
+import { Subscription, of, switchMap } from 'rxjs';
 import { Product } from '../models/product';
 import { DataTransformerService } from '../services/data-transformer.service';
 import { Category } from '../models/category';
 import { CategoryService } from '../services/data/category.service';
 import { ActivatedRoute } from '@angular/router';
+import { ShoppingCart } from '../models/shopping-cart';
+import { ShoppingCartService } from '../services/data/shopping-cart.service';
 
 @Component({
   selector: 'app-products',
@@ -18,26 +20,17 @@ export class ProductsComponent {
   products: Product[] = [];
   filteredProducts: Product[] = [];
   currentCategory!: string | null;
+  cart!: any;
   
  
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService, 
-    private transformer: DataTransformerService
-  ) 
-  {
+    private transformer: DataTransformerService,
+    private cartService: ShoppingCartService
+  ) {
     this.retrieveProducts();
-
-    // const sub = route.queryParamMap.subscribe(params => {
-      
-    //   let category = params.get('category');      
-    //   this.filteredProducts = 
-    //   category ? 
-    //    this.products.filter(product => product.category === category)
-    //   : 
-    //    this.products;
-    // });
-    // this.subscriptions.push(sub);
+    this.retrieveCart();
   }
 
 
@@ -50,7 +43,7 @@ export class ProductsComponent {
   retrieveProducts(): void {
 
     const productList = this.productService.getAll();
-    const products$ = this.transformer.toObservable(productList);
+    const products$ = this.transformer.toObsList(productList);
 
     const sub =
     products$.pipe(
@@ -63,20 +56,25 @@ export class ProductsComponent {
         this.filteredProducts = this.currentCategory ?
         this.products.filter(p => p.category === this.currentCategory) :
         this.products
-
-        //entfernen
-        console.log("currentCategory");
-        console.log(this.currentCategory);
-        console.log(this.products);
-      })
-
-
-    // const sub: Subscription =  products$.subscribe(data => {
-    //   this.filteredProducts = this.products = data;  
-    // });
-    this.subscriptions.push(sub);
-  
+      });
+      
+    this.subscriptions.push(sub);  
   }
 
+  async retrieveCart() {
+    const cartObj = await this.cartService.getCart();
+    const sub = cartObj
+    .valueChanges()
+    .subscribe(cart => {
+      if(!cart) return;
+      this.cart = cart;
+      //entfernen
+      console.log("this.cart");
+      console.log(this.cart);
+    });
+    
+    this.subscriptions.push(sub);
+  }
+  
 
 }

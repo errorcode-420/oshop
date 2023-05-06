@@ -1,14 +1,12 @@
 import { Component, OnDestroy } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, NgForm, NgModel, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from 'src/app/services/data/product.service';
 import { CategoryService } from 'src/app/services/data/category.service';
 import { CustomValidators } from 'ng2-validation';
 import { ActivatedRoute, Router } from '@angular/router';
-import { map, take } from 'rxjs/operators';
 import { Product } from 'src/app/models/product';
 import { Subscription } from 'rxjs';
 import { Category } from 'src/app/models/category';
-import { AuthService } from 'src/app/services/authentication/auth.service';
 import { DataTransformerService } from '../../services/data-transformer.service'
 
 @Component({
@@ -29,7 +27,7 @@ export class ProductFormComponent implements OnDestroy {
   subscriptions: Subscription[] = [];
   categories: Category[] = []; 
   productForm!: FormGroup;
-  product: any = {};
+  currentProduct: any = {};
   id!: string;
 
   constructor
@@ -40,7 +38,7 @@ export class ProductFormComponent implements OnDestroy {
     private fb: FormBuilder,
     private productService: ProductService,
     private transformer: DataTransformerService
-  ){this.constructorFunction()}
+  ) {this.constructorFunction()}
 
   private constructorFunction(){
     this.retrieveCategories();
@@ -55,7 +53,7 @@ export class ProductFormComponent implements OnDestroy {
   retrieveCategories(): void {
 
     const categoryList = this.categoryService.getAll();
-    const categories$ = this.transformer.toObservable(categoryList);
+    const categories$ = this.transformer.toObsList(categoryList);
     const sub =  categories$.subscribe(data => {
       this.categories = data;      
     })
@@ -72,9 +70,6 @@ export class ProductFormComponent implements OnDestroy {
   }
 
   save(product: Product) {
-    //entfernen 
-    console.log("save product");
-    console.log(product);
     if(this.id) this.productService.update(this.id, product);
     else this.productService.create(product);
 
@@ -90,11 +85,14 @@ export class ProductFormComponent implements OnDestroy {
   }
 
   retrieveCurrentProduct(id: string) {
-    const sub = this.productService.getById(id).valueChanges().subscribe(product=> {
+    const productObj = this.productService.getById(id);
+    const sub = productObj
+    .valueChanges()
+    .subscribe(product=> {
       if(!product) return;
 
-      this.product = product;
-      this.product.id = id;
+      this.currentProduct = product;
+      this.currentProduct.id = id;
     });
 
     this.subscriptions.push(sub);    

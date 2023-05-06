@@ -4,4 +4,28 @@
 
 .card-footer {
     padding: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > button {
+        height: 100%;
+        background-color: rgb(120, 182, 97);
+    }
 }
+
+.d-flex {
+    display: flex;
+}
+  
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+  
+  

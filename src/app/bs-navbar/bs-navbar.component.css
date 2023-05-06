@@ -1,3 +1,22 @@
 .nav-link:hover {
     cursor: pointer;
   }
+
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.4rem;
+    background-color: #e0b806;
+    color: #000000;
+  }
+  

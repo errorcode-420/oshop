@@ -48,7 +48,7 @@ export class AdminProductsComponent implements OnDestroy {
   retrieveProducts(): void {
 
     const productList = this.productService.getAll();
-    const products$ = this.transformer.toObservable(productList);
+    const products$ = this.transformer.toObsList(productList);
     const sub: Subscription =  products$.subscribe(data => {
       this.products = data;      
       this.dataSource = new MatTableDataSource<Product>(this.products);

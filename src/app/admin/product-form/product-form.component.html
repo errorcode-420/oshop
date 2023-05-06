@@ -1,18 +1,18 @@
 
 
 
-<div class="row" *ngIf="product">
+<div class="row" *ngIf="currentProduct as p">
 	
 
 	<div class="col-md-6">
-		<form [formGroup]="productForm" (ngSubmit)="save(product)">
+		<form [formGroup]="productForm" (ngSubmit)="save(p)">
 			<div class="form-row align-items-center">
 				<div class="col-auto">
 					<label class="sr-only" for="inlineFormInput">Title</label>
 					<input
 						#title
 						formControlName="title" 
-						[(ngModel)]="product.title"
+						[(ngModel)]="p.title"
 						type="text" 
 						class="form-control mb-2" 
 						id="inlineFormInput" 
@@ -36,7 +36,7 @@
 						<input
 							#price
 							formControlName="price"
-							[(ngModel)]="product.price"
+							[(ngModel)]="p.price"
 							type="text"
 							class="form-control mb-2"
 							id="inlineFormInputGroup"
@@ -63,7 +63,7 @@
 					<label class="sr-only" for="inlineFormInput">Category</label>
 					<select
 						#category
-						[(ngModel)]="product.category"
+						[(ngModel)]="p.category"
 						formControlName="category"							
 						class="form-control"
 						required
@@ -91,7 +91,7 @@
 					</label>
 					<input
 						#imageUrl						
-						[(ngModel)]="product.imageUrl"
+						[(ngModel)]="p.imageUrl"
 						formControlName="imageUrl"
 						type="text"
 						class="form-control mb-2"
@@ -121,22 +121,19 @@
 						<mat-icon>done</mat-icon>
 					</button>
 					
-					<button mat-icon-button (click)="delete(product.id)" matTooltip="Delete">
+					<button mat-icon-button (click)="delete(p.id)" matTooltip="Delete">
 						<mat-icon
 							style="color: #B71C1C">
 							delete
 						</mat-icon>
 					</button>
-					
-
-
 				</div>
 			</div>
 		</form>
 	</div>
 
-	<div class="col-md-3" *ngIf="product.title">
-		<product-card [product]="product" [show-actions]="false"></product-card>
+	<div class="col-md-3" *ngIf="p.title">
+		<product-card [product]="p" [show-actions]="false"></product-card>
 
 	</div>
 </div>

@@ -25,7 +25,7 @@ export class ProductFilterComponent {
   retrieveCategories(): void {
 
     const categoryList = this.categoryService.getAll();
-    const categories$ = this.transformer.toObservable(categoryList);
+    const categories$ = this.transformer.toObsList(categoryList);
     const sub: Subscription =  categories$.subscribe(data => {
       this.categories = data;    
     });

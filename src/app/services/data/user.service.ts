@@ -9,17 +9,24 @@ import { AppUser } from '../../models/app-user';
 })
 export class UserService {
 
-  constructor(private db: AngularFireDatabase) { }
+  dbPath: string;
+
+  constructor(private db: AngularFireDatabase) {
+    this.dbPath = '/users/';
+  }
 
   save(user: firebase.User) {
-    this.db.object('/users/' + user.uid).update({
+    const path = `${this.dbPath}${user.uid}`;
+    const userRef = this.db.object(path);
+    userRef.update({
       name: user.displayName,
       email: user.email
     });
   }
 
-  get(uid: string): AngularFireObject<AppUser> {
-    return this.db.object<AppUser>('/users/' + uid);
+  get(id: string): AngularFireObject<AppUser> {
+    const path = `${this.dbPath}${id}`;
+    return this.db.object<AppUser>(path);
   }
 
 }
