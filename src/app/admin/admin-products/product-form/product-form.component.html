@@ -1,0 +1,113 @@
+
+<div class="card" [@fade]>
+
+    <div class="card-header py-3">
+      <h2 *ngIf="id" class="mb-0">Edit Product</h2>
+	  <h2 *ngIf="!id" class="mb-0">Add Product</h2>
+    </div>	
+
+    <div class="card-body">
+		
+		<div class="row" *ngIf="currentProduct as p">
+			<div fxFlex="50%">
+				<form [formGroup]="productForm">
+					<div style="display: flex; flex-direction: column">
+
+						<mat-form-field appearance="fill">
+							<mat-label>Title</mat-label>
+							<input
+								matInput
+								formControlName="title"
+								[(ngModel)]="p.title"
+								matTooltip="Enter product title">
+							<mat-error *ngIf="productForm.controls['title'].invalid && productForm.controls['title'].touched">
+								<span *ngIf="productForm.controls['title'].errors?.['required']">Title is required.</span>
+							</mat-error>
+						</mat-form-field>
+						
+						<mat-form-field appearance="fill">
+							<mat-label>Price</mat-label>
+							<span matPrefix class="prefix">&#8364;</span>
+							<input
+								matInput 
+								formControlName="price" 
+								[(ngModel)]="p.price" 
+								(blur)="formatPriceValue()"
+								matTooltip="Enter product price">
+							<mat-error *ngIf="productForm.controls['price'].invalid && productForm.controls['price'].touched">
+							  <span *ngIf="productForm.controls['price'].errors?.['required']">Price is required.</span>
+							  <span *ngIf="productForm.controls['price'].errors?.['pattern']">Price should be 0 or higher.</span>
+							</mat-error>
+						  </mat-form-field>						  
+						
+						<mat-form-field appearance="fill">
+							<mat-label>Category</mat-label>
+							<mat-select
+								[(ngModel)]="currentProduct.category"
+								formControlName="category"
+								matTooltip="Select product category">
+							<mat-option
+								*ngFor="let c of categories"
+								[value]="c.id"
+								matTooltip="Select {{ c.name }}">
+								{{ c.name }}								
+							</mat-option>
+							</mat-select>
+							<mat-error *ngIf="productForm.controls['category'].invalid && productForm.controls['category'].touched">
+							<span *ngIf="productForm.controls['category'].errors?.['required']">Category is required.</span>
+							</mat-error>
+						</mat-form-field>
+
+						<mat-form-field appearance="fill">
+							<mat-label>Image URL</mat-label>
+							<input
+								matInput formControlName="imageUrl"
+								[(ngModel)]="p.imageUrl"
+								matTooltip="Enter image URL">
+							<mat-error *ngIf="productForm.controls['imageUrl'].invalid && productForm.controls['imageUrl'].touched">
+								<span *ngIf="productForm.controls['imageUrl'].errors?.['required']">Image URL is required.</span>
+								<span *ngIf="productForm.controls['imageUrl'].errors?.['url']">
+									Only valid URLs allowed. <br>
+									e.g. "https://images.example.jpg"
+								</span>
+							</mat-error>
+						</mat-form-field>
+					</div>
+					
+					<div class="btn-container">
+
+						<button
+							(click)="onSubmitForm()"
+							[disabled]="productForm.invalid"
+							mat-fab
+							[ngStyle]="{'background-color': productForm.invalid ? 'grey' : 'var(--primary-color)'}"
+							matTooltip="Save product">
+							<mat-icon>done</mat-icon>
+						</button>					
+						
+						<button
+							(click)="cancel()"
+							mat-fab
+							color="basic"
+							matTooltip="Cancel editing">
+							<mat-icon>cancel</mat-icon>
+						</button>						  
+
+						<button
+							*ngIf="id"
+							(click)="delete($event)"
+							mat-fab
+							color="basic"
+							matTooltip="Delete product">
+							<mat-icon style="color: #B71C1C">delete</mat-icon>
+						</button>
+
+					</div>	
+				</form>
+			</div>
+			<div fxFlex="50%" *ngIf="p.title">
+				<product-card [product]="p" [show-actions]="false"></product-card>
+			</div>
+		</div>
+    </div>
+</div>

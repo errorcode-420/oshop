@@ -1,0 +1,44 @@
+
+.big-letter {
+  font-size: 3em;
+  margin-right: 5px
+}
+
+.small-letter {
+  font-size: 0.8em;
+}
+
+.small-icon {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.nav-selected {
+  color: green;
+} 
+
+.nav-link:hover {
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: var(--primary-color);
+}
+
+.navbar {  
+  width:100%;
+  position: fixed;
+  z-index: 9999;
+}
+
+.navbar-toggler {
+  margin-bottom: 5px;
+}
+
+.container-fluid {
+  padding: 5px;
+}
+
+.bg-beige {
+  background-color: beige;
+}

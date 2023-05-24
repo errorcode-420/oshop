@@ -1,0 +1,40 @@
+  <div class="card" [@fade] style="margin: auto;">
+
+    <div class="card-header">
+      <h2 class="mb-0">Login Required</h2>  
+    </div>
+
+    <div class="card-body no-footer-card text-center">
+        <p class="lead">Please note that login is required to access all the features of this page.</p>
+    </div>
+
+    <div class="card-footer">
+
+      <button
+        class="custom-btn" 
+        (click)="toProducts()"
+        mat-raised-button 
+        color="primary" 
+        style="background-color:var(--primary-color);"
+        matTooltip="View products">
+        <mat-icon>arrow_back</mat-icon>
+        <span class="btn-text">Back to products</span>
+      </button>
+
+      <button
+        mat-raised-button
+        color="basic"
+        (click)="login()"
+        class="custom-btn"
+        style="background-color:#F3EEEE"
+        matTooltip="Login with your Google account">
+        <div class="lead oauth-container btn darken-4 white black-text">
+          <img
+            alt="Google sign-in"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+            class="google-img" />
+          <span class="btn-text">Login with Google</span>
+        </div>        
+      </button>
+  </div>
+</div>

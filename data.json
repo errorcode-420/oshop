@@ -1,0 +1,1707 @@
+{
+  "categories": {
+    "bread": {
+      "name": "Bread"
+    },
+    "fruits": {
+      "name": "Fruits"
+    },
+    "nuts": {
+      "name": "Nuts"
+    },
+    "seasonings": {
+      "name": "Seasonings and Spices"
+    },
+    "vegetables": {
+      "name": "Vegetables"
+    }
+  },
+  "orders": {
+    "-NVjV6FzBm7ViclADBCZ": {
+      "address": {
+        "city": "Wien",
+        "firstName": "Ferdinand",
+        "lastName": "Dreyer",
+        "number": "4",
+        "street": "Koegasse",
+        "zip": "42069"
+      },
+      "date": "2023.05.18 17:35",
+      "items": [
+        {
+          "product": {
+            "category": "vegetables",
+            "id": "0",
+            "imageUrl": "http://www.publicdomainpictures.net/pictures/170000/velka/spinach-leaves-1461774375kTU.jpg",
+            "price": 2.5,
+            "title": "Spinach"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "bread",
+            "id": "1",
+            "imageUrl": "https://static.pexels.com/photos/2434/bread-food-healthy-breakfast.jpg",
+            "price": 3,
+            "title": "Rolls Bread"
+          },
+          "quantity": 1
+        }
+      ],
+      "itemsCount": 2,
+      "prices": {
+        "delivery": 5,
+        "products": 5.5,
+        "total": 10.5
+      },
+      "reference": "h5vxw4z0",
+      "uid": "Df3T5W9z9yd8uKTChOrQzG826743"
+    },
+    "-NVjVXMo3oE_4Wqc1nBs": {
+      "address": {
+        "city": "Liverpool",
+        "firstName": "Moh",
+        "lastName": "Sallah",
+        "number": "11",
+        "street": "Liverstreet",
+        "zip": "1111"
+      },
+      "date": "2023.05.18 17:37",
+      "items": [
+        {
+          "product": {
+            "category": "bread",
+            "id": "1",
+            "imageUrl": "https://static.pexels.com/photos/2434/bread-food-healthy-breakfast.jpg",
+            "price": 3,
+            "title": "Freshly Baked Bread"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "vegetables",
+            "id": "3",
+            "imageUrl": "https://static.pexels.com/photos/8390/food-wood-tomatoes.jpg",
+            "price": 2.5,
+            "title": "Tomato"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "vegetables",
+            "id": "4",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Lettuce_Mini_Heads_%287331119710%29.jpg",
+            "price": 1,
+            "title": "Lettuce"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "vegetables",
+            "id": "5",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cauliflowers_-_20051021.jpg/1280px-Cauliflowers_-_20051021.jpg",
+            "price": 1.75,
+            "title": "Cauliflower"
+          },
+          "quantity": 1
+        }
+      ],
+      "itemsCount": 4,
+      "prices": {
+        "delivery": 5,
+        "products": 8.25,
+        "total": 13.25
+      },
+      "reference": "ywaphadv",
+      "uid": "nvaq5W9z9nh8uKTChOrQzG891s43"
+    },
+    "-NVjVzzUZLZ5fn1S1GvD": {
+      "address": {
+        "city": "Berlin",
+        "firstName": "Fred",
+        "lastName": "Drey",
+        "number": "12",
+        "street": "Yachigasse",
+        "zip": "1030"
+      },
+      "date": "2023.05.18 17:39",
+      "items": [
+        {
+          "product": {
+            "category": "fruits",
+            "id": "8",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg",
+            "price": 2,
+            "title": "Apple"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "fruits",
+            "id": "9",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Kyoho-grape.jpg",
+            "price": 2,
+            "title": "Grape"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "fruits",
+            "id": "10",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Autumn_Red_peaches.jpg",
+            "price": 2,
+            "title": "Peach"
+          },
+          "quantity": 1
+        }
+      ],
+      "itemsCount": 3,
+      "prices": {
+        "delivery": 5,
+        "products": 6,
+        "total": 11
+      },
+      "reference": "o5pvgnbi",
+      "uid": "r5ubgW9z9yd8ugrChOrQzG89Hs43"
+    },
+    "-NVjWZ2LXxxxzJq9A0hO": {
+      "address": {
+        "city": "Kassel",
+        "firstName": "Mista",
+        "lastName": "Manzana",
+        "number": "7",
+        "street": "Fasanstrasse",
+        "zip": "23432"
+      },
+      "date": "2023.05.18 17:41",
+      "items": [
+        {
+          "product": {
+            "category": "fruits",
+            "id": "8",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg",
+            "price": 2,
+            "title": "Apple"
+          },
+          "quantity": 80
+        }
+      ],
+      "itemsCount": 80,
+      "prices": {
+        "delivery": 0,
+        "products": 160,
+        "total": 160
+      },
+      "reference": "g0nsn9sn",
+      "uid": "nfdq5Wdz9yd8uKTChOrQzG89Hs43"
+    },
+    "-NVjXGv0iqAEjPh1NHRo": {
+      "address": {
+        "city": "Rostock",
+        "firstName": "Popeye",
+        "lastName": "the sailor",
+        "number": "123",
+        "street": "Bootsstrasse",
+        "zip": "44654"
+      },
+      "date": "2023.05.18 17:44",
+      "items": [
+        {
+          "product": {
+            "category": "vegetables",
+            "id": "0",
+            "imageUrl": "http://www.publicdomainpictures.net/pictures/170000/velka/spinach-leaves-1461774375kTU.jpg",
+            "price": 2.5,
+            "title": "Spinach"
+          },
+          "quantity": 20
+        }
+      ],
+      "itemsCount": 20,
+      "prices": {
+        "delivery": 0,
+        "products": 50,
+        "total": 50
+      },
+      "reference": "rmi9hsn5",
+      "uid": "n1dq5W9z9yd8uKTChOrQzG89Hs43"
+    },
+    "-NVjZFMDyesL3aLSdoXR": {
+      "address": {
+        "city": "Duesseldorf",
+        "firstName": "Felix",
+        "lastName": "Blume",
+        "number": "3",
+        "street": "Duesseldorfstrasse",
+        "zip": "40210"
+      },
+      "date": "2023.05.18 17:53",
+      "items": [
+        {
+          "product": {
+            "category": "vegetables",
+            "id": "4",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Lettuce_Mini_Heads_%287331119710%29.jpg",
+            "price": 1,
+            "title": "Lettuce"
+          },
+          "quantity": 4
+        }
+      ],
+      "itemsCount": 4,
+      "prices": {
+        "delivery": 5,
+        "products": 4,
+        "total": 9
+      },
+      "reference": "f3tnvftc",
+      "uid": "n32q5W9z9yd8uKTChOrQzG89Hs43"
+    },
+    "-NW21E7n2PyNScCiWYia": {
+      "address": {
+        "city": "hfgdhfg",
+        "firstName": "ghjhgjg",
+        "lastName": "jghjgh",
+        "number": "45645",
+        "street": "jhgjghjg",
+        "zip": "456456"
+      },
+      "date": "2023.05.22 12:37",
+      "itemsCount": 0,
+      "prices": {
+        "delivery": 5,
+        "products": 0,
+        "total": 5
+      },
+      "reference": "VPSJXYB3",
+      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+    },
+    "-NW229vcQ9DqlTMpiutX": {
+      "address": {
+        "city": "mgjhmhj",
+        "firstName": "hjghjghj",
+        "lastName": "jghjghj",
+        "number": "76",
+        "street": "jgjghj",
+        "zip": "4564"
+      },
+      "date": "2023.05.22 12:41",
+      "items": [
+        {
+          "product": {
+            "category": "nuts",
+            "id": "-PwSrOUFRBMDaJaHRTpep",
+            "imageUrl": "/assets/images/products/almonds.jpg",
+            "price": "2.90",
+            "title": "Almonds"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "fruits",
+            "id": "-kbA0xcfP4npNO9ZlvtVK",
+            "imageUrl": "/assets/images/products/apple.jpg",
+            "price": 2,
+            "title": "Apple"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "fruits",
+            "id": "-6GlJcunZ1J9JGM7FaRaW",
+            "imageUrl": "/assets/images/products/avacado.jpg",
+            "price": 1.75,
+            "title": "Avacado"
+          },
+          "quantity": 1
+        }
+      ],
+      "itemsCount": 3,
+      "prices": {
+        "delivery": 5,
+        "products": 6.65,
+        "total": 11.65
+      },
+      "reference": "ZTJOV1GI",
+      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+    },
+    "-NW22GBUhp8S2kp9Q8wC": {
+      "address": {
+        "city": "jghjghjghj",
+        "firstName": "hrhrth",
+        "lastName": "hfghfgh",
+        "number": "456",
+        "street": "hfghfghfg",
+        "zip": "45645645"
+      },
+      "date": "2023.05.22 12:41",
+      "items": [
+        {
+          "product": {
+            "category": "nuts",
+            "id": "-PwSrOUFRBMDaJaHRTpep",
+            "imageUrl": "/assets/images/products/almonds.jpg",
+            "price": "2.90",
+            "title": "Almonds"
+          },
+          "quantity": 4
+        },
+        {
+          "product": {
+            "category": "fruits",
+            "id": "-kbA0xcfP4npNO9ZlvtVK",
+            "imageUrl": "/assets/images/products/apple.jpg",
+            "price": 2,
+            "title": "Apple"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "seasonings",
+            "id": "-MKw6x6HtzyjAlTn0czD3",
+            "imageUrl": "/assets/images/products/cinnamon-sticks.jpg",
+            "price": 0.5,
+            "title": "Cinnamon Sticks"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "seasonings",
+            "id": "-2MkawLUJhwGya5ql53Dn",
+            "imageUrl": "/assets/images/products/coriander-seeds.jpg",
+            "price": 0.5,
+            "title": "Coriander Seeds"
+          },
+          "quantity": 1
+        }
+      ],
+      "itemsCount": 7,
+      "prices": {
+        "delivery": 5,
+        "products": 14.6,
+        "total": 19.6
+      },
+      "reference": "W689WDE3",
+      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+    },
+    "-NW2bQy3eqmOuTtJpRD1": {
+      "address": {
+        "city": "fdgfdgdf",
+        "firstName": "gfdgdfgdf",
+        "lastName": "dfgdfgdf",
+        "number": "42423",
+        "street": "gdfgdfgdf",
+        "zip": "423423"
+      },
+      "date": "2023.05.22 15:19",
+      "items": [
+        {
+          "product": {
+            "category": "nuts",
+            "id": "-PwSrOUFRBMDaJaHRTpep",
+            "imageUrl": "/assets/images/products/almonds.jpg",
+            "price": "2.90",
+            "title": "Almonds"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "fruits",
+            "id": "-Krvs7RuXkSiDZvBZmey",
+            "imageUrl": "/assets/images/products/banana.jpg",
+            "price": 1.8,
+            "title": "Banana"
+          },
+          "quantity": 3
+        },
+        {
+          "product": {
+            "category": "vegetables",
+            "id": "-NVoJjwoSm-ZAz32gPmC",
+            "imageUrl": "/assets/images/products/broccoli.jpg",
+            "price": "1.60",
+            "title": "Broccoli"
+          },
+          "quantity": 3
+        }
+      ],
+      "itemsCount": 7,
+      "prices": {
+        "delivery": 5,
+        "products": 13.100000000000001,
+        "total": 18.1
+      },
+      "reference": "KJ02J4O8",
+      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+    },
+    "-NW2j0OtC2ZKERwFJjEo": {
+      "address": {
+        "city": "xfhnf",
+        "firstName": "hzhtzh",
+        "lastName": "hgfhfghf",
+        "number": "56",
+        "street": "hztht",
+        "zip": "6456"
+      },
+      "date": "2023.05.22 15:52",
+      "items": [
+        {
+          "product": {
+            "category": "fruits",
+            "id": "-6GlJcunZ1J9JGM7FaRaW",
+            "imageUrl": "/assets/images/products/avacado.jpg",
+            "price": 1.75,
+            "title": "Avacado"
+          },
+          "quantity": 3
+        }
+      ],
+      "itemsCount": 3,
+      "prices": {
+        "delivery": 5,
+        "products": 5.25,
+        "total": 10.25
+      },
+      "reference": "DC2O1FTZ",
+      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+    },
+    "-NW34EdMSoIZDrPm7Ex9": {
+      "address": {
+        "city": "vcxvxcv",
+        "firstName": "gfddfg",
+        "lastName": "dfgdf",
+        "number": "32432",
+        "street": "dsfdsfsd",
+        "zip": "23434"
+      },
+      "date": "2023.05.22 17:30",
+      "items": [
+        {
+          "product": {
+            "category": "fruits",
+            "id": "-6GlJcunZ1J9JGM7FaRaW",
+            "imageUrl": "/assets/images/products/avacado.jpg",
+            "price": 1.75,
+            "title": "Avacado"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "seasonings",
+            "id": "-BKikSXFFd43f7mZf2iwK",
+            "imageUrl": "/assets/images/products/saffron.jpg",
+            "price": 3,
+            "title": "Saffron"
+          },
+          "quantity": 1
+        }
+      ],
+      "itemsCount": 2,
+      "prices": {
+        "delivery": 5,
+        "products": 4.75,
+        "total": 9.75
+      },
+      "reference": "2KOIQL7V",
+      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+    },
+    "-NW3MCWnU8BCdV1ZUGN_": {
+      "address": {
+        "city": "dsfsdfsd",
+        "firstName": "dfsdf",
+        "lastName": "fdsfsd",
+        "number": "4234",
+        "street": "fdsfsdf",
+        "zip": "234234"
+      },
+      "date": "2023.05.22 18:48",
+      "itemsCount": 0,
+      "prices": {
+        "delivery": 5,
+        "products": 0,
+        "total": 5
+      },
+      "reference": "KHQ6CQ94",
+      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+    },
+    "-NW3RmsIneouzwe1lqZr": {
+      "address": {
+        "city": "gdfgdfg",
+        "firstName": "gfhgfh",
+        "lastName": "gfhhfgh",
+        "number": "453",
+        "street": "hgfhfgh",
+        "zip": "345435"
+      },
+      "date": "2023.05.22 19:12",
+      "items": [
+        {
+          "product": {
+            "category": "fruits",
+            "id": "-6GlJcunZ1J9JGM7FaRaW",
+            "imageUrl": "/assets/images/products/avacado.jpg",
+            "price": 1.75,
+            "title": "Avacado"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "nuts",
+            "id": "-0wdYUcrEN3OJefxiD7oG",
+            "imageUrl": "/assets/images/products/cashew.jpg",
+            "price": "2.80",
+            "title": "Cashews"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "seasonings",
+            "id": "-2MkawLUJhwGya5ql53Dn",
+            "imageUrl": "/assets/images/products/coriander-seeds.jpg",
+            "price": 0.5,
+            "title": "Coriander Seeds"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "category": "fruits",
+            "id": "-DTpMmheNeMs5jLAB56JT",
+            "imageUrl": "/assets/images/products/kiwi.jpg",
+            "price": "1.80",
+            "title": "Kiwi"
+          },
+          "quantity": 1
+        }
+      ],
+      "itemsCount": 4,
+      "prices": {
+        "delivery": 5,
+        "products": 6.85,
+        "total": 11.85
+      },
+      "reference": "0O9H3CO2",
+      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+    }
+  },
+  "products": {
+    "-KrqgOLs07ZkbapP4EGi": {
+      "category": "vegetables",
+      "imageUrl": "/assets/images/products/spinach.jpg",
+      "price": 2.5,
+      "title": "Spinach"
+    },
+    "-KrrIkDT19XhPgWo0T0A": {
+      "category": "bread",
+      "imageUrl": "/assets/images/products/rolls.jpg",
+      "price": 3,
+      "title": "Rolls"
+    },
+    "-KrvrXbV3rqnFEru_ojw": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/avacado.jpg",
+      "price": 1.75,
+      "title": "Avacado"
+    },
+    "-KrvrgogC3oac5k83Awt": {
+      "category": "vegetables",
+      "imageUrl": "/assets/images/products/tomato.jpg",
+      "price": 2.5,
+      "title": "Tomato"
+    },
+    "-Krvrt2nkeRw2HCbiGDj": {
+      "category": "vegetables",
+      "imageUrl": "/assets/images/products/lettuce.jpg",
+      "price": 1,
+      "title": "Lettuce"
+    },
+    "-Krvs0ZZBpz5GuM0RfC8": {
+      "category": "vegetables",
+      "imageUrl": "/assets/images/products/cauliflower.jpg",
+      "price": 1.7,
+      "title": "Cauliflower"
+    },
+    "-Krvs7RuXkSiDZvBZmey": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/banana.jpg",
+      "price": 1.8,
+      "title": "Banana"
+    },
+    "-KrvsKZbI_mpo3hJg7G7": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/orange.jpg",
+      "price": 1.9,
+      "title": "Orange"
+    },
+    "-KrvsRNOg-ftEUM3Te-F": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/apple.jpg",
+      "price": 2,
+      "title": "Apple"
+    },
+    "-Krvs_CiDXdiZ3yd0PUp": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/grape.jpg",
+      "price": 2,
+      "title": "Grape"
+    },
+    "-KrvsfKjGc0NCM0prc0I": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/peach.jpg",
+      "price": 2,
+      "title": "Peach"
+    },
+    "-KrvsrmX3I1-Bo6eFCdx": {
+      "category": "seasonings",
+      "imageUrl": "/assets/images/products/cinnamon-sticks.jpg",
+      "price": 0.5,
+      "title": "Cinnamon Sticks"
+    },
+    "-KrvsxvxOmTzMXOSx7iG": {
+      "category": "seasonings",
+      "imageUrl": "/assets/images/products/saffron.jpg",
+      "price": 3,
+      "title": "Saffron"
+    },
+    "-Krvt8G_naLT8Pg_Fob6": {
+      "category": "seasonings",
+      "imageUrl": "/assets/images/products/ground-turmeric.jpg",
+      "price": 0.75,
+      "title": "Ground Turmeric"
+    },
+    "-KrvtXWZvGv-mr0IFbAA": {
+      "category": "seasonings",
+      "imageUrl": "/assets/images/products/coriander-seeds.jpg",
+      "price": 0.5,
+      "title": "Coriander Seeds"
+    },
+    "-Krvtvc_uQyh6dzI-J3R": {
+      "category": "bread",
+      "imageUrl": "/assets/images/products/lavash-bread.jpg",
+      "price": 1.25,
+      "title": "Lavash Bread"
+    },
+    "-Krvu3aL-m-ku0yCnQGr": {
+      "category": "bread",
+      "imageUrl": "/assets/images/products/bagel-bread.jpg",
+      "price": 1.3,
+      "title": "Polish Bagel"
+    },
+    "-KrvuH_bkBBZDW0NCwfl": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/strawberry.jpg",
+      "price": 1.95,
+      "title": "Strawberry"
+    },
+    "-KrvuT7GtYfsFvmQfgoj": {
+      "category": "bread",
+      "imageUrl": "/assets/images/products/baguette-bread.jpg",
+      "price": 1.25,
+      "title": "French Baguette"
+    },
+    "-NVoJCfUjbdyr2Jb372A": {
+      "category": "nuts",
+      "imageUrl": "/assets/images/products/almonds.jpg",
+      "price": "2.90",
+      "title": "Almonds"
+    },
+    "-NVoJbvpbk9f0Tw6IYIQ": {
+      "category": "nuts",
+      "imageUrl": "/assets/images/products/brazil-nut.jpg",
+      "price": "3.20",
+      "title": "Brazil Nuts"
+    },
+    "-NVoJjwoSm-ZAz32gPmC": {
+      "category": "vegetables",
+      "imageUrl": "/assets/images/products/broccoli.jpg",
+      "price": "1.60",
+      "title": "Broccoli"
+    },
+    "-NVoJpUhw0B8PZiAX1Gz": {
+      "category": "vegetables",
+      "imageUrl": "/assets/images/products/carrot.jpg",
+      "price": "1.20",
+      "title": "Carrot"
+    },
+    "-NVoK53a1DPTLfHdbwJ_": {
+      "category": "nuts",
+      "imageUrl": "/assets/images/products/cashew.jpg",
+      "price": "2.80",
+      "title": "Cashews"
+    },
+    "-NVoKBAd09L7hXH3wvw_": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/cherry.jpg",
+      "price": "1.50",
+      "title": "Cherries"
+    },
+    "-NVoKIFWXqGRTSZ0iCyJ": {
+      "category": "seasonings",
+      "imageUrl": "/assets/images/products/cumin.jpg",
+      "price": "1.30",
+      "title": "Cumin"
+    },
+    "-NVoKNw_h9B2ldwqsC6O": {
+      "category": "vegetables",
+      "imageUrl": "/assets/images/products/asparagus.jpg",
+      "price": "3.60",
+      "title": "Green Asparagus"
+    },
+    "-NVoKPwD6F5DIaCO_zAv": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/kiwi.jpg",
+      "price": "1.80",
+      "title": "Kiwi"
+    },
+    "-NVoKXmmGoJxDoiY_U5w": {
+      "category": "vegetables",
+      "imageUrl": "/assets/images/products/leek.jpg",
+      "price": "1.20",
+      "title": "Leek"
+    },
+    "-NVoKkVXhyTSGwdafDzO": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/lemon.jpg",
+      "price": "1.40",
+      "title": "Lemon"
+    },
+    "-NVoKv3O3Z5n4QhHrtgs": {
+      "category": "vegetables",
+      "imageUrl": "/assets/images/products/onion.jpg",
+      "price": "1.40",
+      "title": "Onion"
+    },
+    "-NVoL0e5GQq_ZPq80MZR": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/papaya.jpg",
+      "price": "4.00",
+      "title": "Papaya"
+    },
+    "-NVoL5vLi1asJSdzsrKX": {
+      "category": "nuts",
+      "imageUrl": "/assets/images/products/peanuts.jpg",
+      "price": "2.50",
+      "title": "Peanuts"
+    },
+    "-NVoLAz5LtWWbkvIgqi7": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/pear.jpg",
+      "price": "2.00",
+      "title": "Pear"
+    },
+    "-NVoLGeUIq93sxk8vmrz": {
+      "category": "vegetables",
+      "imageUrl": "/assets/images/products/pepper.jpg",
+      "price": "1.80",
+      "title": "Pepper"
+    },
+    "-NVoLOcAdD6xuzH1lyDS": {
+      "category": "nuts",
+      "imageUrl": "/assets/images/products/pistachios.jpg",
+      "price": "2.90",
+      "title": "Pistachios"
+    },
+    "-NVoLUcKjZ7MsqD2vsGr": {
+      "category": "nuts",
+      "imageUrl": "/assets/images/products/walnuts.jpg",
+      "price": "2.60",
+      "title": "Walnuts"
+    },
+    "-NVoL_D6JUzxt4yBzPZj": {
+      "category": "bread",
+      "imageUrl": "/assets/images/products/white-bread.jpg",
+      "price": "2.00",
+      "title": "White Bread"
+    },
+    "-NVoLp4Nxpvg6Ep1pvIT": {
+      "category": "bread",
+      "imageUrl": "/assets/images/products/wholemeal- bread.jpg",
+      "price": "2.20",
+      "title": "Wholemeal Bread"
+    },
+    "-NVoPzw_2zANldwKTjkO": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/pineapple.jpg",
+      "price": "3.00",
+      "title": "Pineapple"
+    },
+    "-NVoQyl_ezANldzSVjk4": {
+      "category": "seasonings",
+      "imageUrl": "/assets/images/products/dill-seeds.jpg",
+      "price": "1.10",
+      "title": "Dill Seeds"
+    },
+    "-NVojyo_SS6dldhjjlGG": {
+      "category": "fruits",
+      "imageUrl": "/assets/images/products/mango.jpg",
+      "price": "2.80",
+      "title": "Mango"
+    }
+  },
+  "user-data": {
+    "n5uq5W9z9yd8uKTChOrQzG89Hs43": {
+      "orders": {
+        "-0oHmUT3Nk6wV1eO4DKUC": {
+          "address": {
+            "city": "vcxvxcv",
+            "firstName": "gfddfg",
+            "lastName": "dfgdf",
+            "number": "32432",
+            "street": "dsfdsfsd",
+            "zip": "23434"
+          },
+          "date": "2023.05.22 17:30",
+          "items": [
+            {
+              "product": {
+                "category": "fruits",
+                "id": "-6GlJcunZ1J9JGM7FaRaW",
+                "imageUrl": "/assets/images/products/avacado.jpg",
+                "price": 1.75,
+                "title": "Avacado"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "seasonings",
+                "id": "-BKikSXFFd43f7mZf2iwK",
+                "imageUrl": "/assets/images/products/saffron.jpg",
+                "price": 3,
+                "title": "Saffron"
+              },
+              "quantity": 1
+            }
+          ],
+          "itemsCount": 2,
+          "prices": {
+            "delivery": 5,
+            "products": 4.75,
+            "total": 9.75
+          },
+          "reference": "2IQL7V",
+          "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+        },
+        "-3DSxihESkk9Hb8iZJdzt": {
+          "address": {
+            "city": "gdfgdfg",
+            "firstName": "gfhgfh",
+            "lastName": "gfhhfgh",
+            "number": "453",
+            "street": "hgfhfgh",
+            "zip": "345435"
+          },
+          "date": "2023.05.22 19:12",
+          "items": [
+            {
+              "product": {
+                "category": "fruits",
+                "id": "-6GlJcunZ1J9JGM7FaRaW",
+                "imageUrl": "/assets/images/products/avacado.jpg",
+                "price": 1.75,
+                "title": "Avacado"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "nuts",
+                "id": "-0wdYUcrEN3OJefxiD7oG",
+                "imageUrl": "/assets/images/products/cashew.jpg",
+                "price": "2.80",
+                "title": "Cashews"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "seasonings",
+                "id": "-2MkawLUJhwGya5ql53Dn",
+                "imageUrl": "/assets/images/products/coriander-seeds.jpg",
+                "price": 0.5,
+                "title": "Coriander Seeds"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "fruits",
+                "id": "-DTpMmheNeMs5jLAB56JT",
+                "imageUrl": "/assets/images/products/kiwi.jpg",
+                "price": "1.80",
+                "title": "Kiwi"
+              },
+              "quantity": 1
+            }
+          ],
+          "itemsCount": 4,
+          "prices": {
+            "delivery": 5,
+            "products": 6.85,
+            "total": 11.85
+          },
+          "reference": "0O9H3CO2",
+          "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+        },
+        "-FoP31HAJPrNUxe6SRlbt": {
+          "address": {
+            "city": "xfhnf",
+            "firstName": "hzhtzh",
+            "lastName": "hgfhfghf",
+            "number": "56",
+            "street": "hztht",
+            "zip": "6456"
+          },
+          "date": "2023.05.22 15:52",
+          "items": [
+            {
+              "product": {
+                "category": "fruits",
+                "id": "-6GlJcunZ1J9JGM7FaRaW",
+                "imageUrl": "/assets/images/products/avacado.jpg",
+                "price": 1.75,
+                "title": "Avacado"
+              },
+              "quantity": 3
+            }
+          ],
+          "itemsCount": 3,
+          "prices": {
+            "delivery": 5,
+            "products": 5.25,
+            "total": 10.25
+          },
+          "reference": "DC2O1FTZ",
+          "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+        },
+        "-H0rBougHoe8VNDxYTzmR": {
+          "address": {
+            "city": "Kassel",
+            "firstName": "Mista",
+            "lastName": "Manzana",
+            "number": "7",
+            "street": "Fasanstrasse",
+            "zip": "23432"
+          },
+          "date": "2023.05.18 17:41",
+          "items": [
+            {
+              "product": {
+                "category": "fruits",
+                "id": "8",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg",
+                "price": 2,
+                "title": "Apple"
+              },
+              "quantity": 80
+            }
+          ],
+          "itemsCount": 80,
+          "prices": {
+            "delivery": 0,
+            "products": 160,
+            "total": 160
+          },
+          "reference": "g0nsn9sn",
+          "uid": "nfdq5Wdz9yd8uKTChOrQzG89Hs43"
+        },
+        "-OhaXoED86OPQdohSEk8T": {
+          "address": {
+            "city": "fdgfdgdf",
+            "firstName": "gfdgdfgdf",
+            "lastName": "dfgdfgdf",
+            "number": "42423",
+            "street": "gdfgdfgdf",
+            "zip": "423423"
+          },
+          "date": "2023.05.22 15:19",
+          "items": [
+            {
+              "product": {
+                "category": "nuts",
+                "id": "-PwSrOUFRBMDaJaHRTpep",
+                "imageUrl": "/assets/images/products/almonds.jpg",
+                "price": "2.90",
+                "title": "Almonds"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "fruits",
+                "id": "-Krvs7RuXkSiDZvBZmey",
+                "imageUrl": "/assets/images/products/banana.jpg",
+                "price": 1.8,
+                "title": "Banana"
+              },
+              "quantity": 3
+            },
+            {
+              "product": {
+                "category": "vegetables",
+                "id": "-NVoJjwoSm-ZAz32gPmC",
+                "imageUrl": "/assets/images/products/broccoli.jpg",
+                "price": "1.60",
+                "title": "Broccoli"
+              },
+              "quantity": 3
+            }
+          ],
+          "itemsCount": 7,
+          "prices": {
+            "delivery": 5,
+            "products": 13.100000000000001,
+            "total": 18.1
+          },
+          "reference": "KJ02J4O8",
+          "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+        },
+        "-PR13kRPRiTkhAZQemota": {
+          "address": {
+            "city": "hfgdhfg",
+            "firstName": "ghjhgjg",
+            "lastName": "jghjgh",
+            "number": "45645",
+            "street": "jhgjghjg",
+            "zip": "456456"
+          },
+          "date": "2023.05.22 12:37",
+          "itemsCount": 0,
+          "prices": {
+            "delivery": 5,
+            "products": 0,
+            "total": 5
+          },
+          "reference": "VPSJXYB3",
+          "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+        },
+        "-QkaJ80kJo6miV8I40beZ": {
+          "address": {
+            "city": "dsfsdfsd",
+            "firstName": "dfsdf",
+            "lastName": "fdsfsd",
+            "number": "4234",
+            "street": "fdsfsdf",
+            "zip": "234234"
+          },
+          "date": "2023.05.22 18:48",
+          "itemsCount": 0,
+          "prices": {
+            "delivery": 5,
+            "products": 0,
+            "total": 5
+          },
+          "reference": "KHQ6CQ94",
+          "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+        },
+        "-XAdp0JCmUTPgVXKixruH": {
+          "address": {
+            "city": "mgjhmhj",
+            "firstName": "hjghjghj",
+            "lastName": "jghjghj",
+            "number": "76",
+            "street": "jgjghj",
+            "zip": "4564"
+          },
+          "date": "2023.05.22 12:41",
+          "items": [
+            {
+              "product": {
+                "category": "nuts",
+                "id": "-PwSrOUFRBMDaJaHRTpep",
+                "imageUrl": "/assets/images/products/almonds.jpg",
+                "price": "2.90",
+                "title": "Almonds"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "fruits",
+                "id": "-kbA0xcfP4npNO9ZlvtVK",
+                "imageUrl": "/assets/images/products/apple.jpg",
+                "price": 2,
+                "title": "Apple"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "fruits",
+                "id": "-6GlJcunZ1J9JGM7FaRaW",
+                "imageUrl": "/assets/images/products/avacado.jpg",
+                "price": 1.75,
+                "title": "Avacado"
+              },
+              "quantity": 1
+            }
+          ],
+          "itemsCount": 3,
+          "prices": {
+            "delivery": 5,
+            "products": 6.65,
+            "total": 11.65
+          },
+          "reference": "ZTJOV1GI",
+          "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+        },
+        "-cEehJvcwspgAp0H0JMhv": {
+          "address": {
+            "city": "Wien",
+            "firstName": "Ferdinand",
+            "lastName": "Dreyer",
+            "number": "4",
+            "street": "Koegasse",
+            "zip": "42069"
+          },
+          "date": "2023.05.18 17:35",
+          "items": [
+            {
+              "product": {
+                "category": "vegetables",
+                "id": "0",
+                "imageUrl": "http://www.publicdomainpictures.net/pictures/170000/velka/spinach-leaves-1461774375kTU.jpg",
+                "price": 2.5,
+                "title": "Spinach"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "bread",
+                "id": "1",
+                "imageUrl": "https://static.pexels.com/photos/2434/bread-food-healthy-breakfast.jpg",
+                "price": 3,
+                "title": "Rolls Bread"
+              },
+              "quantity": 1
+            }
+          ],
+          "itemsCount": 2,
+          "prices": {
+            "delivery": 5,
+            "products": 5.5,
+            "total": 10.5
+          },
+          "reference": "h5vxw4z0",
+          "uid": "Df3T5W9z9yd8uKTChOrQzG826743"
+        },
+        "-fwhYVizy8dP6d5dV0sdw": {
+          "address": {
+            "city": "Rostock",
+            "firstName": "Popeye",
+            "lastName": "the sailor",
+            "number": "123",
+            "street": "Bootsstrasse",
+            "zip": "44654"
+          },
+          "date": "2023.05.18 17:44",
+          "items": [
+            {
+              "product": {
+                "category": "vegetables",
+                "id": "0",
+                "imageUrl": "http://www.publicdomainpictures.net/pictures/170000/velka/spinach-leaves-1461774375kTU.jpg",
+                "price": 2.5,
+                "title": "Spinach"
+              },
+              "quantity": 20
+            }
+          ],
+          "itemsCount": 20,
+          "prices": {
+            "delivery": 0,
+            "products": 50,
+            "total": 50
+          },
+          "reference": "rmi9hsn5",
+          "uid": "n1dq5W9z9yd8uKTChOrQzG89Hs43"
+        },
+        "-kvLJkrlfXsfnMt9rTyqC": {
+          "address": {
+            "city": "Berlin",
+            "firstName": "Fred",
+            "lastName": "Drey",
+            "number": "12",
+            "street": "Yachigasse",
+            "zip": "1030"
+          },
+          "date": "2023.05.18 17:39",
+          "items": [
+            {
+              "product": {
+                "category": "fruits",
+                "id": "8",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg",
+                "price": 2,
+                "title": "Apple"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "fruits",
+                "id": "9",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Kyoho-grape.jpg",
+                "price": 2,
+                "title": "Grape"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "fruits",
+                "id": "10",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Autumn_Red_peaches.jpg",
+                "price": 2,
+                "title": "Peach"
+              },
+              "quantity": 1
+            }
+          ],
+          "itemsCount": 3,
+          "prices": {
+            "delivery": 5,
+            "products": 6,
+            "total": 11
+          },
+          "reference": "o5pvgnbi",
+          "uid": "r5ubgW9z9yd8ugrChOrQzG89Hs43"
+        },
+        "-kzc1hnyOrHlqf3UKmE9a": {
+          "address": {
+            "city": "Duesseldorf",
+            "firstName": "Felix",
+            "lastName": "Blume",
+            "number": "3",
+            "street": "Duesseldorfstrasse",
+            "zip": "40210"
+          },
+          "date": "2023.05.18 17:53",
+          "items": [
+            {
+              "product": {
+                "category": "vegetables",
+                "id": "4",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Lettuce_Mini_Heads_%287331119710%29.jpg",
+                "price": 1,
+                "title": "Lettuce"
+              },
+              "quantity": 4
+            }
+          ],
+          "itemsCount": 4,
+          "prices": {
+            "delivery": 5,
+            "products": 4,
+            "total": 9
+          },
+          "reference": "f3tnvftc",
+          "uid": "n32q5W9z9yd8uKTChOrQzG89Hs43"
+        },
+        "-xfYne2L2uSrDpNKF2ZxL": {
+          "address": {
+            "city": "jghjghjghj",
+            "firstName": "hrhrth",
+            "lastName": "hfghfgh",
+            "number": "456",
+            "street": "hfghfghfg",
+            "zip": "45645645"
+          },
+          "date": "2023.05.22 12:41",
+          "items": [
+            {
+              "product": {
+                "category": "nuts",
+                "id": "-PwSrOUFRBMDaJaHRTpep",
+                "imageUrl": "/assets/images/products/almonds.jpg",
+                "price": "2.90",
+                "title": "Almonds"
+              },
+              "quantity": 4
+            },
+            {
+              "product": {
+                "category": "fruits",
+                "id": "-kbA0xcfP4npNO9ZlvtVK",
+                "imageUrl": "/assets/images/products/apple.jpg",
+                "price": 2,
+                "title": "Apple"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "seasonings",
+                "id": "-MKw6x6HtzyjAlTn0czD3",
+                "imageUrl": "/assets/images/products/cinnamon-sticks.jpg",
+                "price": 0.5,
+                "title": "Cinnamon Sticks"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "seasonings",
+                "id": "-2MkawLUJhwGya5ql53Dn",
+                "imageUrl": "/assets/images/products/coriander-seeds.jpg",
+                "price": 0.5,
+                "title": "Coriander Seeds"
+              },
+              "quantity": 1
+            }
+          ],
+          "itemsCount": 7,
+          "prices": {
+            "delivery": 5,
+            "products": 14.6,
+            "total": 19.6
+          },
+          "reference": "W689WDE3",
+          "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
+        },
+        "-yrkjBVeWISLThbBw3aXV": {
+          "address": {
+            "city": "Liverpool",
+            "firstName": "Moh",
+            "lastName": "Sallah",
+            "number": "11",
+            "street": "Liverstreet",
+            "zip": "1111"
+          },
+          "date": "2023.05.18 17:37",
+          "items": [
+            {
+              "product": {
+                "category": "bread",
+                "id": "1",
+                "imageUrl": "https://static.pexels.com/photos/2434/bread-food-healthy-breakfast.jpg",
+                "price": 3,
+                "title": "Freshly Baked Bread"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "vegetables",
+                "id": "3",
+                "imageUrl": "https://static.pexels.com/photos/8390/food-wood-tomatoes.jpg",
+                "price": 2.5,
+                "title": "Tomato"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "vegetables",
+                "id": "4",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Lettuce_Mini_Heads_%287331119710%29.jpg",
+                "price": 1,
+                "title": "Lettuce"
+              },
+              "quantity": 1
+            },
+            {
+              "product": {
+                "category": "vegetables",
+                "id": "5",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cauliflowers_-_20051021.jpg/1280px-Cauliflowers_-_20051021.jpg",
+                "price": 1.75,
+                "title": "Cauliflower"
+              },
+              "quantity": 1
+            }
+          ],
+          "itemsCount": 4,
+          "prices": {
+            "delivery": 5,
+            "products": 8.25,
+            "total": 13.25
+          },
+          "reference": "ywaphadv",
+          "uid": "nvaq5W9z9nh8uKTChOrQzG891s43"
+        }
+      },
+      "products": {
+        "-0wdYUcrEN3OJefxiD7oG": {
+          "category": "nuts",
+          "imageUrl": "/assets/images/products/cashew.jpg",
+          "price": "2.80",
+          "title": "Cashews"
+        },
+        "-2MkawLUJhwGya5ql53Dn": {
+          "category": "seasonings",
+          "imageUrl": "/assets/images/products/coriander-seeds.jpg",
+          "price": 0.5,
+          "title": "Coriander Seeds"
+        },
+        "-5j68VsvZHQ2kby6xd6a9": {
+          "category": "vegetables",
+          "imageUrl": "/assets/images/products/spinach.jpg",
+          "price": 2.5,
+          "title": "Spinach"
+        },
+        "-6GlJcunZ1J9JGM7FaRaW": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/avacado.jpg",
+          "price": 1.75,
+          "title": "Avacado"
+        },
+        "-8uWwXNGOKpqZAoxtOp0Q": {
+          "category": "nuts",
+          "imageUrl": "/assets/images/products/walnuts.jpg",
+          "price": "2.60",
+          "title": "Walnuts"
+        },
+        "-BEd7ldOMyvtuTW5BUMJu": {
+          "category": "bread",
+          "imageUrl": "/assets/images/products/bagel-bread.jpg",
+          "price": 1.3,
+          "title": "Polish Bagel"
+        },
+        "-BKikSXFFd43f7mZf2iwK": {
+          "category": "seasonings",
+          "imageUrl": "/assets/images/products/saffron.jpg",
+          "price": 3,
+          "title": "Saffron"
+        },
+        "-BQP4Pz9TkWiry38f5Hl0": {
+          "category": "bread",
+          "imageUrl": "/assets/images/products/wholemeal- bread.jpg",
+          "price": "2.20",
+          "title": "Wholemeal Bread"
+        },
+        "-DTpMmheNeMs5jLAB56JT": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/kiwi.jpg",
+          "price": "1.80",
+          "title": "Kiwi"
+        },
+        "-IiV4yOx9iXvF2AisjvUM": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/peach.jpg",
+          "price": 2,
+          "title": "Peach"
+        },
+        "-IkAnY8g2c9vyaaC6PhJ4": {
+          "category": "seasonings",
+          "imageUrl": "/assets/images/products/dill-seeds.jpg",
+          "price": "1.10",
+          "title": "Dill Seeds"
+        },
+        "-MKw6x6HtzyjAlTn0czD3": {
+          "category": "seasonings",
+          "imageUrl": "/assets/images/products/cinnamon-sticks.jpg",
+          "price": 0.5,
+          "title": "Cinnamon Sticks"
+        },
+        "-O5w0osvam0RQgo7aDfxt": {
+          "category": "vegetables",
+          "imageUrl": "/assets/images/products/leek.jpg",
+          "price": "1.20",
+          "title": "Leek"
+        },
+        "-Oh0HCaLpFz8K90wKp795": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/papaya.jpg",
+          "price": "4.00",
+          "title": "Papaya"
+        },
+        "-PZvPet1SUlcfliZC1jjK": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/pear.jpg",
+          "price": "2.00",
+          "title": "Pear"
+        },
+        "-PwSrOUFRBMDaJaHRTpep": {
+          "category": "nuts",
+          "imageUrl": "/assets/images/products/almonds.jpg",
+          "price": "2.90",
+          "title": "Almonds"
+        },
+        "-QCO9hNqSpJlKAvXD0sXC": {
+          "category": "nuts",
+          "imageUrl": "/assets/images/products/peanuts.jpg",
+          "price": "2.50",
+          "title": "Peanuts"
+        },
+        "-SU0FuFyyOvX8XsdJ7u3V": {
+          "category": "bread",
+          "imageUrl": "/assets/images/products/white-bread.jpg",
+          "price": "2.00",
+          "title": "White Bread"
+        },
+        "-UsGPeyoS6AMD8yTXPfu6": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/lemon.jpg",
+          "price": "1.40",
+          "title": "Lemon"
+        },
+        "-VbYsCrfR8MPkQIgCLkWg": {
+          "category": "nuts",
+          "imageUrl": "/assets/images/products/brazil-nut.jpg",
+          "price": "3.20",
+          "title": "Brazil Nuts"
+        },
+        "-aPZSRijrg37pzjSBM1y2": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/grape.jpg",
+          "price": 2,
+          "title": "Grape"
+        },
+        "-hKxEvcrA4se7pI3iFe4p": {
+          "category": "vegetables",
+          "imageUrl": "/assets/images/products/tomato.jpg",
+          "price": 2.5,
+          "title": "Tomato"
+        },
+        "-iUQKdBpPtCo7sqsyarI1": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/pineapple.jpg",
+          "price": "3.00",
+          "title": "Pineapple"
+        },
+        "-ju3b5hwXbCQMIAuQwuNR": {
+          "category": "nuts",
+          "imageUrl": "/assets/images/products/pistachios.jpg",
+          "price": "2.90",
+          "title": "Pistachios"
+        },
+        "-kbA0xcfP4npNO9ZlvtVK": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/apple.jpg",
+          "price": 2,
+          "title": "Apple"
+        },
+        "-kz7N8AI8bbJXpncQbJ6b": {
+          "category": "vegetables",
+          "imageUrl": "/assets/images/products/asparagus.jpg",
+          "price": "3.60",
+          "title": "Green Asparagus"
+        },
+        "-l9zs67p3dSiI9FS78xOZ": {
+          "category": "bread",
+          "imageUrl": "/assets/images/products/lavash-bread.jpg",
+          "price": 1.25,
+          "title": "Lavash Bread"
+        },
+        "-lKF8LUl2L41Nb50WmkjR": {
+          "category": "bread",
+          "imageUrl": "/assets/images/products/rolls.jpg",
+          "price": 3,
+          "title": "Rolls"
+        },
+        "-n4JE84ChEcYXULmcAohM": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/orange.jpg",
+          "price": 1.9,
+          "title": "Orange"
+        },
+        "-q3uOo6iVw5X3pP2XCsqZ": {
+          "category": "vegetables",
+          "imageUrl": "/assets/images/products/carrot.jpg",
+          "price": "1.20",
+          "title": "Carrot"
+        },
+        "-qkCTiJC0YznZJzC3q2O1": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/strawberry.jpg",
+          "price": 1.95,
+          "title": "Strawberry"
+        },
+        "-sfLJd85ENH1XGAuyvLWi": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/mango.jpg",
+          "price": "2.80",
+          "title": "Mango"
+        },
+        "-t4LdxRBy2M9uRstdnujB": {
+          "category": "bread",
+          "imageUrl": "/assets/images/products/baguette-bread.jpg",
+          "price": 1.25,
+          "title": "French Baguette"
+        },
+        "-tBMIPzItRD04B81GwV2K": {
+          "category": "vegetables",
+          "imageUrl": "/assets/images/products/lettuce.jpg",
+          "price": 1,
+          "title": "Lettuce"
+        },
+        "-tD4emjFkB9pDy3ApS84p": {
+          "category": "seasonings",
+          "imageUrl": "/assets/images/products/ground-turmeric.jpg",
+          "price": 0.75,
+          "title": "Ground Turmeric"
+        },
+        "-uAGHIYyBmOdILI0kY116": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/cherry.jpg",
+          "price": "1.50",
+          "title": "Cherries"
+        },
+        "-uT6N6gjJGkvf28HiCAAD": {
+          "category": "vegetables",
+          "imageUrl": "/assets/images/products/onion.jpg",
+          "price": "1.40",
+          "title": "Onion"
+        },
+        "-vbIUWBNlKsiFIfjNcnDv": {
+          "category": "fruits",
+          "imageUrl": "/assets/images/products/banana.jpg",
+          "price": 1.8,
+          "title": "Banana"
+        },
+        "-xKK50c5YV4dHfAWMJ9PZ": {
+          "category": "vegetables",
+          "imageUrl": "/assets/images/products/pepper.jpg",
+          "price": "1.80",
+          "title": "Pepper"
+        },
+        "-xMILiH8smKMCXR6IlFNB": {
+          "category": "seasonings",
+          "imageUrl": "/assets/images/products/cumin.jpg",
+          "price": "1.30",
+          "title": "Cumin"
+        },
+        "-ySiDyOWBfPOBAcPQu7XB": {
+          "category": "vegetables",
+          "imageUrl": "/assets/images/products/broccoli.jpg",
+          "price": "1.60",
+          "title": "Broccoli"
+        },
+        "-zHuqqxYAN6CxsrCZps3j": {
+          "category": "vegetables",
+          "imageUrl": "/assets/images/products/cauliflower.jpg",
+          "price": 1.7,
+          "title": "Cauliflower"
+        }
+      }
+    }
+  },
+  "users": {
+    "iOADbMaCMbfZfxqUkkFmK9WHpnk2": {
+      "email": "programmingwithmosh@gmail.com",
+      "isAdmin": true,
+      "name": "Mosh Hamedani"
+    },
+    "n5uq5W9z9yd8uKTChOrQzG89Hs43": {
+      "email": "agent3fd@gmail.com",
+      "isAdmin": true,
+      "name": "foerd dreyer"
+    }
+  }
+}

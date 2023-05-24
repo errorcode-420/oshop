@@ -1,0 +1,50 @@
+
+<popup>
+    <ng-container class="header">{{title}}</ng-container>
+    <ng-container class="body">{{message}}</ng-container>
+    <ng-container class="additional">
+        <br>
+
+        These additional functions are available in the admin view:
+        
+        <ul class="list-group">
+            <li class="list-group-item d-flex align-items-center">
+                <mat-icon class="mr-2 align-self-start" class="icon-text">check_box</mat-icon>
+                <span>View all orders</span>
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+                <mat-icon class="mr-2 align-self-start" class="icon-text">check_box</mat-icon>
+                <span>Add new products</span>
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+                <mat-icon class="mr-2 align-self-start" class="icon-text">check_box</mat-icon>
+                <span>Delete products</span>
+            </li>
+        </ul>              
+    </ng-container>
+    <ng-container class="footer">     
+
+        <div class="btn-container-popup">   
+            <button
+                class="btn btn-sm"
+                (click)="closeDialog()"
+                color="basic"
+                mat-raised-button
+                matTooltip="Cancel">
+                <mat-icon >cancel</mat-icon>
+                Cancel
+            </button>     
+             
+            <button
+                class="btn btn-sm"
+                (click)="confirm()"
+                color="basic"
+                mat-raised-button
+                matTooltip="Switch to admin view">
+                <mat-icon class="colored-icon">security</mat-icon>                               
+                Admin
+            </button>
+        </div>
+
+    </ng-container>
+</popup>

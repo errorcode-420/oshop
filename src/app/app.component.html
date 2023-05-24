@@ -1,5 +1,11 @@
-<bs-navbar></bs-navbar>
 
-<div class="container">
-  <router-outlet></router-outlet>
+
+<bs-navbar (closeM)="closeMenu()"></bs-navbar>
+<div
+  class="row">
+  <div fxFlex="15%" fxFlex.xs="0%" fxFlex.sm="7%"></div>
+  <div fxFlex="70%" fxFlex.xs="100%" fxFlex.sm="86%" class="container">
+    <router-outlet></router-outlet>
+  </div>
+  <div fxFlex="15%" fxFlex.xs="0%" fxFlex.sm="7%"></div>
 </div>

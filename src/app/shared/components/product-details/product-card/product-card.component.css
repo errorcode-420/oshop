@@ -1,0 +1,23 @@
+.card {
+    margin-bottom: 30px;
+}
+
+.product-card-footer {
+    padding: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+    > button {
+        height: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+.to-cart-btn {
+    border-top-left-radius: 0;
+    border-top-right-radius:0;
+}

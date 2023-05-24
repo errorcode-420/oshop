@@ -1,0 +1,32 @@
+.d-flex {
+    display: flex;
+}
+  
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    width: 100%;    
+}
+  
+.quantity {
+    margin: auto; /* Zentriert die Zahl vertikal */
+    font-weight: bold;
+    font-size: 20px; /* Beispielwert, passe die Schriftgröße nach Bedarf an */
+
+  }
+    
+
+.quantity-btn{
+    background-color: #e0e0e0;
+    height: 100%;
+
+    border: none;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}

@@ -23,6 +23,12 @@
       "dom"
     ]
   },
+  "baseUrl": ".src",
+  "paths": {
+    "shared/*": [
+      "app/shared/*"
+    ]
+  },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

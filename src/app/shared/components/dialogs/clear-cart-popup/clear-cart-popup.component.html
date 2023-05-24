@@ -1,0 +1,31 @@
+
+
+<popup>
+    <ng-container class="header">{{title}}</ng-container>
+    <ng-container class="body">{{message}}</ng-container>
+    <ng-container class="footer">    
+         
+        <div class="btn-container-popup">   
+            <button
+                class="btn btn-sm"
+                (click)="closeDialog()"
+                color="basic"
+                mat-raised-button
+                matTooltip="Cancel">
+                <mat-icon>cancel</mat-icon>
+                Cancel
+            </button>      
+
+            <button
+                class="btn btn-sm"
+                (click)="confirm()"
+                color="warn"
+                mat-raised-button
+                matTooltip="Clear shopping cart">
+                <mat-icon>shopping_cart</mat-icon>
+                Clear
+            </button>
+        </div>
+        
+    </ng-container>
+</popup>
