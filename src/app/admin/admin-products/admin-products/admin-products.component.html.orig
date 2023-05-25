@@ -72,9 +72,16 @@
                   style="color: #B71C1C">
                   delete
               </mat-icon>
+<<<<<<< HEAD
             </button>          
           </td>
-      </ng-container>          
+      </ng-container>  
+
+=======
+            </button>            
+          </td>
+      </ng-container>   
+>>>>>>> 15cdc2feeb0cba1e6d47262046cd2f50adec4acb
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row;columns:displayedColumns"></tr>  
     </table>    
