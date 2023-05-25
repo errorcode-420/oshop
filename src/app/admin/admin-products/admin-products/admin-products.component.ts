@@ -82,6 +82,10 @@ export class AdminProductsComponent implements OnDestroy {
     localStorage.setItem('pageSize', pageSize.toString());
   }
 
+  trackByFn(index: string, product: Product): string {
+    return product.id;
+  }
+
   ngOnDestroy(): void {
     this.subscriptions.forEach((subscription: Subscription) => {
       subscription.unsubscribe();

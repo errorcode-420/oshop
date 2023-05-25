@@ -17,6 +17,7 @@ export class CartButtonComponent {
   }
   ngOnInit() {
     window.addEventListener('scroll', this.scroll, true); // Listener hinzufügen
+    this.showButton = this.isSmallScreen();
   }
 
   ngOnDestroy() {
@@ -24,7 +25,7 @@ export class CartButtonComponent {
   }
 
   scroll = (): void => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 50 || this.isSmallScreen()) {
       this.showButton = true;
     } else {
       this.showButton = false;
@@ -34,4 +35,11 @@ export class CartButtonComponent {
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  isSmallScreen() {
+    const screenWidth = window.innerWidth;
+    const isSmallScreen = screenWidth < 1000;
+    return isSmallScreen;
+  }
+
 }
