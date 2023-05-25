@@ -1,0 +1,23 @@
+
+
+<div class="d-flex justify-content-between" style="height:100%">
+
+    <button 
+        class="quantity-btn" 
+        (click)="addToCart()"
+        mat-button
+        matTooltip="Increase quantity">
+        <mat-icon>add</mat-icon>
+    </button>
+
+    <span [@enlargeFont]="fontAnimationState" [@shrinkFont]="fontAnimationState" class="quantity">{{quantity}}</span>
+    
+    <button
+        class="quantity-btn"
+        (click)="removeFromCart()"
+        mat-button
+        matTooltip="Reduce quantity">
+        <mat-icon class="icon-large">remove</mat-icon>
+    </button>
+</div>
+

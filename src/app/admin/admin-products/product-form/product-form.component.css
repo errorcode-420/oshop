@@ -1,0 +1,15 @@
+.btn-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  > button {
+    margin: auto;
+    
+  }
+}
+
+.prefix {
+  padding-left: 8px; /* Ändern Sie den Wert nach Bedarf */
+}
+
+

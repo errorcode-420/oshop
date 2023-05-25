@@ -1,0 +1,10 @@
+.cart-items {
+    max-height: 400px; /* Setze die maximale Höhe für den Cart-Inhalt */
+    overflow-y: auto; /* Füge eine vertikale Scrollbar hinzu, falls der Inhalt über die maximale Höhe hinausgeht */
+    overflow-x: hidden; /* Verstecke die horizontale Scrollbar */
+
+}
+  
+.clear-cart-btn {
+    margin: auto;
+}

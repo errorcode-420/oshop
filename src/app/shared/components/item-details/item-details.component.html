@@ -1,0 +1,80 @@
+<div class="row" *ngIf="item as i">
+      <div 
+         fxFlex="33"
+         fxFlex.xs="25%"
+         fxFlex.sm="30%"
+         fxFlex.md="30%"
+         fxFlex.lg="20%"
+         [fxFlex]="quantityEditable ? '33%' : '33%'"
+         [fxFlex.xs]="quantityEditable ? '25%' : '35%'"
+         [fxFlex.sm]="quantityEditable ? '30%' : '30%'"
+         [fxFlex.md]="quantityEditable ? '30%' : '30%'"
+         [fxFlex.lg]="quantityEditable ? '20%' : '25%'">
+         <div
+            class="bg-image hover-overlay hover-zoom ripple rounded"
+            data-mdb-ripple-color="light">
+            <img
+               src="{{i.product.imageUrl}}"
+               class="card-img" 
+               alt="{{i.product.title}}"/>
+         </div>   
+      </div>
+
+   <div   
+      [fxFlex]="quantityEditable ? '33%' : '33%'"
+      [fxFlex.xs]="quantityEditable ? '25%' : '35%'"
+      [fxFlex.sm]="quantityEditable ? '30%' : '30%'"
+      [fxFlex.md]="quantityEditable ? '30%' : '35%'"
+      [fxFlex.lg]="quantityEditable ? '30%' : '25%'">
+      <p><strong>{{i.product.title}}</strong></p>
+      <p>Price: {{i.product.price | currency: '€': true }}</p>
+   </div>
+
+   <div
+      [fxFlex]="quantityEditable ? '34%' : '34%'"
+      [fxFlex.xs]="quantityEditable ? '50%' : '30%'"
+      [fxFlex.sm]="quantityEditable ? '40%' : '40%'"
+      [fxFlex.md]="quantityEditable ? '40%' : '35%'"
+      [fxFlex.lg]="quantityEditable ? '50%' : '50%'">
+      <div *ngIf="quantityEditable">
+         <div class="d-flex mb-4">
+            <product-quantity
+               [product]="i.product"
+               [quantity]="i.quantity"
+               (animationTriggered)="triggerLightUp($event)"
+               [@lightUp]="animationState"
+               style="width: 100%; min-height: 30px;">
+            </product-quantity>
+         </div>
+   
+         <p class="text-start text-md-center">
+            <strong>Sum: {{priceSum | currency: '€': true }}</strong>
+         </p>
+      </div>
+
+      <div *ngIf="!quantityEditable">
+                 
+         <p
+            *ngIf="!quantityEditable"
+            class="text-start text-md-center">
+            <span>Items: {{item.quantity}}</span>
+         </p>
+   
+         <p class="text-start text-md-center">
+            <strong>Sum: {{priceSum | currency: '€': true }}</strong>
+         </p>
+         
+      </div>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

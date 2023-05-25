@@ -1,0 +1,109 @@
+
+<form [formGroup]="addressForm" (ngSubmit)="onSubmitForm()">
+
+<div class="row d-flex justify-content-center" [@fade]>
+    <div
+      fxFlex="67%"
+      fxFlex.xs="100%">
+
+      <div class="card mb-4">
+
+        <div class="card-header py-3">
+          <h2 class="mb-0">Delivery adress</h2>
+        </div>
+        
+        <div class="card-body no-footer-card" [@fade]>
+          <div class="row">
+            <div fxFlex="50%">
+
+              <mat-form-field appearance="fill">
+                <mat-label>First name</mat-label>
+                <input matInput formControlName="firstName">
+                <mat-error *ngIf="addressForm.controls['firstName'].invalid && addressForm.controls['firstName'].touched">
+                  <span *ngIf="addressForm.controls['firstName'].errors?.['required']">First name is required.</span>
+                  <span *ngIf="addressForm.controls['firstName'].errors?.['pattern']">Only letters allowed.</span>
+                </mat-error>
+              </mat-form-field>     
+              
+              <mat-form-field appearance="fill">
+                <mat-label>Straße</mat-label>
+                <input matInput formControlName="street">
+                <mat-error *ngIf="addressForm.controls['street'].invalid && addressForm.controls['street'].touched">
+                  <span *ngIf="addressForm.controls['street'].errors?.['required']">Street is required.</span>
+                  <span *ngIf="addressForm.controls['street'].errors?.['pattern']">Only letters allowed.</span>
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Stadt</mat-label>
+                <input matInput formControlName="city">
+                <mat-error *ngIf="addressForm.controls['city'].invalid && addressForm.controls['city'].touched">
+                  <span *ngIf="addressForm.controls['city'].errors?.['required']">City is required.</span>
+                  <span *ngIf="addressForm.controls['city'].errors?.['pattern']">Only letters allowed.</span>
+                </mat-error>
+              </mat-form-field>
+
+            </div>
+            <div fxFlex="50%">
+              
+              <mat-form-field appearance="fill">
+                <mat-label>Last name</mat-label>
+                <input matInput formControlName="lastName">
+                <mat-error *ngIf="addressForm.controls['lastName'].invalid && addressForm.controls['lastName'].touched">
+                  <span *ngIf="addressForm.controls['lastName'].errors?.['required']">Last name is required.</span>
+                  <span *ngIf="addressForm.controls['lastName'].errors?.['pattern']">Only letters allowed.</span>
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Hausnummer</mat-label>
+                <input matInput formControlName="number">
+                <mat-error *ngIf="addressForm.controls['number'].invalid && addressForm.controls['number'].touched">
+                  <span *ngIf="addressForm.controls['number'].errors?.['required']">House number is required.</span>
+                  <span *ngIf="addressForm.controls['number'].errors?.['pattern']">Only numbers allowed.</span>
+                </mat-error>
+              </mat-form-field>
+            
+              <mat-form-field appearance="fill">
+                <mat-label>Postleitzahl</mat-label>
+                <input matInput formControlName="zip">
+                <mat-error *ngIf="addressForm.controls['zip'].invalid && addressForm.controls['zip'].touched">
+                  <span *ngIf="addressForm.controls['zip'].errors?.['required']">Postal code is required.</span>
+                  <span *ngIf="addressForm.controls['zip'].errors?.['pattern']">Only numbers allowed (4 - 8 digits).</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+        </div>      
+        </div>
+      </div>
+
+      <delivery-date></delivery-date>
+
+      <payment-methods></payment-methods>
+
+    </div>
+
+    <div
+      fxFlex="33%"
+      fxFlex.xs="100%">
+      
+      <summary [cart-items]="items"></summary>
+
+      <button
+        class="btn finish-btn btn-lg btn-block checkout-btn flex-grow-1"
+        [disabled]="addressForm.status === 'INVALID'"
+        mat-button
+        type="submit"
+        matTooltip="Go to payment">
+        <mat-icon class="mr-2">payment</mat-icon>
+        Go to payment
+      </button>  
+
+      <div *ngIf="addressForm.invalid && addressForm.touched" style="margin-top: 10px;">
+        <mat-error *ngIf="addressForm.controls['firstName'].invalid && addressForm.controls['firstName'].touched">
+          <span>Address is invalid. Please fill out all required fields correctly.</span>
+        </mat-error>        
+      </div>
+    </div>
+ </div>
+</form>

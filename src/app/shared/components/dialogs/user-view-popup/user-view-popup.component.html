@@ -1,0 +1,48 @@
+
+
+<popup>
+  <ng-container class="header">{{title}}</ng-container>
+  <ng-container class="body">{{message}}</ng-container>
+  <ng-container class="additional">
+      <br>
+      
+      These functions are no longer available in the user view:
+    
+      <ul class="list-group">
+          <li class="list-group-item d-flex align-items-center">
+            <mat-icon class="mr-2 align-self-start" class="icon-text">indeterminate_check_box</mat-icon>
+            <span>View all orders</span>
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <mat-icon class="mr-2 align-self-start" class="icon-text">indeterminate_check_box</mat-icon>
+            <span>Add new products</span>
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <mat-icon class="mr-2 align-self-start" class="icon-text">indeterminate_check_box</mat-icon>
+            <span>Delete products</span>
+          </li>
+      </ul>         
+        
+  </ng-container>
+  <ng-container class="footer">        
+      <button
+        class="btn btn-sm"
+        (click)="closeDialog()"
+        color="basic"
+        mat-raised-button
+        matTooltip="Cancel">            
+        <mat-icon>cancel</mat-icon>
+        Cancel
+      </button>      
+      <button
+        class="btn btn-sm"
+        (click)="confirm()"
+        color="basic"
+        mat-raised-button
+        style="margin-left: 10px;"
+        matTooltip="Switch to user view">
+        <mat-icon class="colored-icon">person</mat-icon>                 
+        User
+    </button>
+  </ng-container>
+</popup>

@@ -1,0 +1,9 @@
+.active {
+  background-color: #31343a;
+  border: 1px solid black;
+}  
+
+.product-filter {
+  top: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}

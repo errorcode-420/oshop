@@ -1,0 +1,15 @@
+<div class="card">
+
+    <div class="card-header text-center"><ng-content select=".header"></ng-content></div>
+
+    <div class="card-body">
+        <div class="text-center"><ng-content select=".body"></ng-content></div>
+        <div><ng-content select=".additional"></ng-content></div>
+    </div>
+
+    <div class="card-footer">
+        <div class="text-center" style="display: flex; justify-content: center;">
+            <ng-content select=".footer"></ng-content>
+        </div>
+    </div>     
+</div>

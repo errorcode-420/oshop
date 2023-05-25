@@ -1,0 +1,18 @@
+.cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    margin-top: 10px
+  }
+  
+  .cart-icon {
+    font-size: 20px;
+    margin-top: -2px; /* Justiere den vertikalen Abstand des Icons */
+  }
+  
+  .btn-text {
+    margin-left: 4px; /* Füge horizontalen Abstand zwischen Icon und Text hinzu */
+  }
+  

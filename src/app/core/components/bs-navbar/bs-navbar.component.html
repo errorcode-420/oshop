@@ -1,0 +1,178 @@
+<nav class="navbar navbar-expand-lg bg-beige">
+  <div class="container-fluid">
+    <button 
+      class="navbar-toggler"
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarContent" 
+      aria-controls="navbarContent" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mx-auto">
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            (click)="selectedNavItem = 'home'"
+            (click)="closeMenu()"
+            routerLink="/"          
+            matTooltip="Home">
+            <span [ngClass]="{'nav-selected': selectedNavItem === 'home'}" class="big-letter">O</span>
+            <span [ngClass]="{'nav-selected': selectedNavItem === 'home'}" class="small-letter">-shop</span>
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            (click)="selectedNavItem = 'cart'"
+            (click)="closeMenu()"
+            routerLink="/shopping-cart"    
+            matTooltip="Shopping cart">
+            <mat-icon
+              [ngClass]="{'nav-selected': selectedNavItem === 'cart'}">
+              shopping_cart
+            </mat-icon>
+            <span
+              *ngIf="totalCount"
+              class="badge badge-pill badge-primary ml-1">
+              {{totalCount}}
+            </span>
+          </a>
+        </li>
+        
+        <ng-template #anonymousUser>
+          <li class="nav-item">
+            <a            
+              class="nav-link"
+              (click)="selectedNavItem = 'login'"            
+              (click)="closeMenu()"            
+              routerLink="/login"
+              matTooltip="Login">
+              <span [ngClass]="{'nav-selected': selectedNavItem === 'login'}">Login</span>
+              </a>
+          </li>
+        </ng-template>
+  
+        <li *ngIf="appUser; else anonymousUser" class="nav-item">
+          <div ngbDropdown>
+  
+            <a
+              class="nav-link"
+              ngbDropdownToggle
+              matTooltip="Menu">
+              {{appUser.name}}
+            </a>
+  
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+  
+              <button
+                class="dropdown-item"
+                (click)="closeMenu()"
+                routerLink="/user/orders"
+                ngbDropdownItem
+                matTooltip="My orders">
+                <div class="d-flex align-items-center">
+                  <mat-icon [@fade] class="icon-text">local_shipping</mat-icon>
+                  <span>My Orders</span>
+                </div>              
+              </button>    
+            
+  
+              <ng-container *ngIf="appUser.isAdmin">
+  
+                <button
+                  routerLink="/admin/orders"
+                  (click)="closeMenu()"
+                  ngbDropdownItem
+                  
+                  matTooltip="Manage orders">
+                  <div class="d-flex align-items-center">
+                    <mat-icon class="icon-text">assignment</mat-icon>
+                    <span>Manage Orders</span>
+                  </div>              
+                </button>    
+                
+                <button
+                  class="dropdown-item"
+                  (click)="closeMenu()"
+                  routerLink="/admin/products"
+                  ngbDropdownItem
+                  matTooltip="Manage products">                
+                  <div class="d-flex align-items-center">
+                    <mat-icon class="icon-text">spa</mat-icon>
+                    <span>Manage Products</span>
+                  </div>              
+                </button>   
+  
+              </ng-container>
+  
+              <button
+
+                class="dropdown-item"
+                (click)="logout()" 
+                (click)="closeMenu()"
+                routerLink="/login"  
+                ngbDropdownItem              
+                matTooltip="Manage products"
+                matTooltip="Log out">
+                <div class="d-flex align-items-center">
+                  <mat-icon class="icon-text">exit_to_app</mat-icon>
+                  <span>Log Out</span>
+                </div>              
+              </button>
+              
+            </div>
+          </div>
+        </li> 
+  
+        <li class="nav-item ml-auto" style="margin-left: 20px;">
+          <mat-icon *ngIf="!appUser?.isAdmin && appUser!=null" class="small-icon colored-icon" [@fade] >person</mat-icon>
+          <mat-icon *ngIf="appUser?.isAdmin" class="small-icon colored-icon" [@fade]>security</mat-icon> 
+        </li>
+  
+        <li *ngIf="appUser" class="nav-item">
+          <div ngbDropdown>
+            <a class="nav-link" ngbDropdownToggle matTooltip="Switch view">
+  
+              <span *ngIf="!appUser.isAdmin">
+                User View
+              </span>
+              <span *ngIf="appUser.isAdmin">
+                Admin View
+              </span>
+            </a>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button 
+                class="dropdown-item"
+                ngbDropdownItem 
+                (click)="switchView('user')"
+                (click)="closeMenu()"                
+                matTooltip="Switch to user view">              
+                <div class="d-flex align-items-center">
+                  <mat-icon class="icon-text"  [ngClass]="{'colored-icon': !appUser?.isAdmin}" [@fade]>person</mat-icon>
+                  <span>User View</span>
+                </div>
+              </button>
+              <button
+                class="dropdown-item"
+                ngbDropdownItem  
+                (click)="switchView('admin')" 
+                (click)="closeMenu()"
+                matTooltip="Switch to admin view"> 
+                <div class="d-flex align-items-center">
+                  <mat-icon class="icon-text" [ngClass]="{'colored-icon': appUser?.isAdmin}" [@fade]>security</mat-icon>
+                  <span>Admin View</span>
+                </div>
+              </button>     
+            </div>      
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+

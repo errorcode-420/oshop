@@ -1,0 +1,54 @@
+
+
+<div
+  *ngIf="product as p"
+  class="card">
+
+  <ng-container *ngIf="p.imageUrl; then productImage else emptyImage"></ng-container>
+  <ng-template #productImage>
+    <img
+      src="{{p.imageUrl}}"
+      alt="{{p.title}}"
+      class="card-img-top">
+  </ng-template>   
+  
+  <ng-template #emptyImage>
+    <img
+      src="https://tse2.mm.bing.net/th?id=OIP.9sklXnyAUopqY0eQmkq8nQHaHa&pid=Api"
+      style="max-height: 350px;"
+      class="card-img-top">
+  </ng-template>   
+
+  <div class="card-body"
+    [@lightUp]="animationState">
+    <h2 class="card-title">{{p.title}}</h2>
+    <p class="card-text">{{ p.price | currency: '€': true }}</p>
+  </div>
+    <div
+        *ngIf="showActions"
+        class="card-footer product-card-footer">
+        <ng-container *ngIf="quantity; then quantitySelector else addButton"></ng-container>
+
+        <ng-template #quantitySelector>
+          <product-quantity
+            style="width: 100%; height: 100%" 
+            [quantity]="quantity"
+            [product]="p"
+            (animationTriggered)="triggerLightUp($event)" 
+            [@lightUp]="animationState">
+          </product-quantity>
+        </ng-template>              
+        
+        <ng-template #addButton>
+          <button
+              class="btn primary-btn flex-grow-1 to-cart-btn"
+              (click)="addToCart()"
+              mat-button
+              matTooltip="Add to cart">
+              Add to cart
+          </button> 
+        </ng-template>
+    </div>
+</div>
+
+

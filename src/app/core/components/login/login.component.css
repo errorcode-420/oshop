@@ -1,0 +1,34 @@
+
+.btn-container {
+    > button{
+        height: 50px;
+        margin: 5px;
+       }
+}
+
+.google-img {    
+    width:30px;
+    margin-right:8px
+}
+
+.custom-btn {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+  
+.btn-text {
+  margin-left: 8px;
+} 
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .btn-text {
+    display: none;
+  }
+}
+

@@ -1,0 +1,13 @@
+<button 
+    *ngIf="showButton" 
+    routerLink="/shopping-cart"
+    class="btn secondary-btn cart-btn flex-grow-1"
+    matTooltip="Go to cart">
+    <mat-icon class="cart-icon">shopping_cart</mat-icon>
+    <span
+        *ngIf="totalCount"
+        class="badge badge-pill badge-primary ml-1">
+        {{totalCount}}
+    </span>
+    <span class="btn-text">To Cart</span>
+</button>

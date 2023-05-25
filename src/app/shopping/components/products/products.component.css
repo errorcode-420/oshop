@@ -1,0 +1,36 @@
+.side-bar {
+    top: 0;
+    height: 300px;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+  display: flex;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+.sticky-filter {
+  position: sticky;
+  top: 100px;
+  z-index: 100;
+}
+
+.sticky-filter + div {
+  margin-top: 20px; /* Passe den gewünschten Abstand hier an */
+}

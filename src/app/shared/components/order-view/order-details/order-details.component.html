@@ -1,0 +1,102 @@
+
+<div class="row">
+    <div
+        fxFlex="0%"
+        fxFlex.md="7%"
+        fxFlex.lg="15%">
+    </div>
+    <div
+        fxFlex="100%"
+        fxFlex.md="86%"
+        fxFlex.lg="70%">
+        <div *ngIf="currentOrder as o" class="card" [@fade]>
+            <div class="card-header px-4 py-5">
+                <h2 
+                    *ngIf="usage === 'user'"
+                    class="text-muted mb-0">
+                    Thanks for your Order, 
+                    <span style="color: var(--primary-color);">{{o.address.firstName}}!</span>
+                </h2> 
+                <h2
+                    *ngIf="usage === 'admin'"
+                    class="text-muted mb-0">
+                    Order by 
+                    <span style="color: var(--primary-color);">
+                        {{o.address.firstName}} {{o.address.lastName}}
+                    </span>
+                </h2>
+            </div>
+        
+            <div class="card-body no-footer-card p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  <p class="lead fw-normal mb-0" style="color:var(--primary-color);">Receipt</p>
+                </div>
+        
+                <div class="card shadow-0 border mb-4">
+        
+                    <div class="card-body">                       
+
+                        <div 
+                            *ngFor="let i of o.items"
+                            class="card shadow-0 border mb-4">
+                            <item-details
+                                [cart-item]="i"
+                                [quantityEditable]="false"
+                                style="margin:10px">
+                            </item-details>          
+                        </div>   
+                        
+                        <div class="d-flex justify-content-between pt-2">
+                        <p class="fw-bold mb-0 small-text">Order Details</p>
+                        </div>
+        
+                        <div class="d-flex justify-content-between pt-2">
+                            <p class="text-muted mb-0">
+                                Order Reference : {{o.reference}}
+                            </p>
+                            <p class="text-muted mb-0">
+                                <span class="fw-bold me-4">Items</span>
+                                {{o.prices.products | currency: '€': true }}
+                            </p>
+                        </div> 
+                        
+                        <div class="d-flex justify-content-between">
+                            <p class="text-muted mb-0">Date : {{o.date | date: 'dd.MM.yyyy' }}</p>
+                            <p class="text-muted mb-0">
+                                <span class="fw-bold me-4">Delivery</span>
+                                {{o.prices.delivery | currency: '€': true }}
+                            </p>
+                        </div>            
+        
+                        <div class="d-flex justify-content-between">
+                            <p class="text-muted mb-0">Time : {{ o.date | date: 'h:mm a' }}</p>
+                            <p class="text-muted mb-0">
+                                <span class="fw-bold me-4">Total</span>
+                                {{o.prices.total | currency: '€': true }}
+                            </p>
+                        </div>      
+
+                        <div class="d-flex justify-content-between">
+                            <p class="text-muted mb-0">Delivery : {{earliestDate | date: 'dd.MM' }} - {{latestDate | date: 'dd.MM.yyyy' }}</p>
+                        </div>            
+        
+                    </div>
+        
+                    <div
+                        class="card-footer border-0 px-4 py-5"
+                        style="background-color: var(--primary-color);">
+                        <h5 
+                            class="d-flex align-items-center justify-content-end text-white text-uppercase mb-0">
+                            Total paid: <span class="h2 mb-0 ms-2">{{o.prices.total | currency: '€': true }}</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div
+        fxFlex="0%"
+        fxFlex.md="7%"
+        fxFlex.lg="15%">
+    </div>
+</div>
