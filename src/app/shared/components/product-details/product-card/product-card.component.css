@@ -8,14 +8,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    
-    > button {
-        height: 100%;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
 }
+
+.product-card-footer button {
+    height: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 
 .to-cart-btn {
     border-top-left-radius: 0;

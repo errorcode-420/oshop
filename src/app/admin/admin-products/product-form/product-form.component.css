@@ -2,10 +2,10 @@
   display: flex;
   justify-content: center;
   flex-grow: 1;
-  > button {
-    margin: auto;
-    
-  }
+}
+
+.btn-container > button {
+  margin: auto;
 }
 
 .prefix {

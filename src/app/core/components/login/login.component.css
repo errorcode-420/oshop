@@ -1,10 +1,8 @@
-
-.btn-container {
-    > button{
-        height: 50px;
-        margin: 5px;
-       }
+.btn-container > button {
+  height: 50px;
+  margin: 5px;
 }
+
 
 .google-img {    
     width:30px;
@@ -31,4 +29,3 @@
     display: none;
   }
 }
-
