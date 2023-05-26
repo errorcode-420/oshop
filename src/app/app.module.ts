@@ -12,6 +12,7 @@ import { CoreModule } from './core/core.module';
 import { ProductsComponent } from './shopping/components/products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckOutFormComponent } from './shopping/components/orders/check-out-form/check-out.component';
+import { HomeComponent } from './core/components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CheckOutFormComponent } from './shopping/components/orders/check-out-fo
     AngularFireModule.initializeApp(environment.firebaseConfig),
     RouterModule.forRoot([
       { path: '', component: ProductsComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'login', component: LoginComponent },
     ]),
     BrowserAnimationsModule   
