@@ -41,6 +41,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# # API keys
-# src/app/environment/
+# API keys
+src/app/environment/
 
