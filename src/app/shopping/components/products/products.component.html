@@ -1,18 +1,14 @@
 
-
-
 <div [@fade]>
-  <div fxFlex="50%" fxFlex.xs="50%" fxFlex.sm="30%" fxFlex.md="30%" fxFlex.lg="30%">
+  <div fxFlex="30%" fxFlex.xs="50%">
     <div class="sticky-filter">
       <product-filter [currentCategory]="currentCategory" [cart-items]="items"></product-filter>
     </div>
   </div>
 
-  <div fxFlex="5%" fxFlex.xs="5%" fxFlex.sm="5%" fxFlex.md="5%" fxFlex.lg="5%">
-   
-  </div>
+  <div fxFlex="5%"></div>
 
-  <div fxFlex="45%" fxFlex.xs="45%" fxFlex.sm="65%" fxFlex.md="65%" fxFlex.lg="65%">
+  <div fxFlex="65%" fxFlex.xs="45%">
     <div class="row" [@slideRight]="filteredProducts.length">
       <ng-container *ngFor="let p of filteredProducts; let i = index">
         <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="50%" fxFlex.lg="50%">

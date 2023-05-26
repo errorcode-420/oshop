@@ -9,7 +9,6 @@ import { UserService } from './shared/services/data/user.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  [x: string]: any;
 
   
   constructor
