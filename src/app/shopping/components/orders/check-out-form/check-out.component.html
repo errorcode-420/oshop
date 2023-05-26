@@ -26,7 +26,7 @@
               </mat-form-field>     
               
               <mat-form-field appearance="fill">
-                <mat-label>Straße</mat-label>
+                <mat-label>Street</mat-label>
                 <input matInput formControlName="street">
                 <mat-error *ngIf="addressForm.controls['street'].invalid && addressForm.controls['street'].touched">
                   <span *ngIf="addressForm.controls['street'].errors?.['required']">Street is required.</span>
@@ -35,7 +35,7 @@
               </mat-form-field>
 
               <mat-form-field appearance="fill">
-                <mat-label>Stadt</mat-label>
+                <mat-label>City</mat-label>
                 <input matInput formControlName="city">
                 <mat-error *ngIf="addressForm.controls['city'].invalid && addressForm.controls['city'].touched">
                   <span *ngIf="addressForm.controls['city'].errors?.['required']">City is required.</span>
@@ -56,7 +56,7 @@
               </mat-form-field>
 
               <mat-form-field appearance="fill">
-                <mat-label>Hausnummer</mat-label>
+                <mat-label>House number</mat-label>
                 <input matInput formControlName="number">
                 <mat-error *ngIf="addressForm.controls['number'].invalid && addressForm.controls['number'].touched">
                   <span *ngIf="addressForm.controls['number'].errors?.['required']">House number is required.</span>
@@ -65,7 +65,7 @@
               </mat-form-field>
             
               <mat-form-field appearance="fill">
-                <mat-label>Postleitzahl</mat-label>
+                <mat-label>Zip code</mat-label>
                 <input matInput formControlName="zip">
                 <mat-error *ngIf="addressForm.controls['zip'].invalid && addressForm.controls['zip'].touched">
                   <span *ngIf="addressForm.controls['zip'].errors?.['required']">Postal code is required.</span>
