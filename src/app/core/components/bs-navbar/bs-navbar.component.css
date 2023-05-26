@@ -29,6 +29,7 @@
   width:100%;
   position: fixed;
   z-index: 9999;
+  background-color: var(--container-color);
 }
 
 .navbar-toggler {
@@ -39,6 +40,4 @@
   padding: 5px;
 }
 
-.bg-beige {
-  background-color: beige;
-}
+

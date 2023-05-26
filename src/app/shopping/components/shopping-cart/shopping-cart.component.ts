@@ -71,9 +71,8 @@ export class ShoppingCartComponent {
         .sort((a, b) => a.product.title.localeCompare(b.product.title)); // Sortiere die items nach dem product.title
     }
   } 
-  
-  trackByFn(index: number, item: any): string {
-    return item.product.id;
+  trackByFn(index: number, product: any): any {
+    return product.id; // Hier musst du die entsprechende Eigenschaft verwenden, die das Produkt eindeutig identifiziert
   }
 
   toCheckout() {

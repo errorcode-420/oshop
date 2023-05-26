@@ -82,6 +82,9 @@ export class OrderListComponent {
   
     const sub: Subscription = orders$.subscribe(data => {
       this.orders = data
+      data.sort((a, b) => {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      });
       this.dataSource = new MatTableDataSource<Order>(data);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;

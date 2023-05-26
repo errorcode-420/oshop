@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { BsNavbarComponent } from './components/bs-navbar/bs-navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { BsFooterComponent } from './components/bs-footer/bs-footer.component';
 
 
 
@@ -16,10 +17,12 @@ import { LoginComponent } from './components/login/login.component';
   declarations: [
     BsNavbarComponent,
     HomeComponent,
-    LoginComponent,        
+    LoginComponent,
+    BsFooterComponent,        
   ],
   exports: [
-    BsNavbarComponent
+    BsNavbarComponent,
+    BsFooterComponent   
   ]
 })
 export class CoreModule { }

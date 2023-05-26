@@ -37,13 +37,14 @@ export class OrderService {
   getById(id: string): AngularFireObject<Order> {
     const path = `${this.getCurrentPath()}${id}`;
     return this.db.object(path);
+  } 
+
+  getByUser(appUser: any): AngularFireList<Order> {
+    const id = appUser?.id + '';
+    return this.db.list(this.getCurrentPath(), ref => ref.orderByChild('uid').equalTo(id));
   }
   
-  getByUser(appUser: any): AngularFireList<Order> {
-    const id = appUser?.id+'';
-    return this.db.list(this.getCurrentPath(), ref => ref.orderByChild('uid').equalTo(id));
-  }  
-
+  
   async getAll(): Promise<AngularFireList<Order>> {
     console.log('load data');
     this.dbPathUser = await this.userDataService.create(this.dbPathBase);

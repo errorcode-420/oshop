@@ -32,7 +32,7 @@ export class ProductService {
   
   async getAll(): Promise<AngularFireList<Product>> {
     this.dbPathUser = await this.userDataService.create(this.dbPathBase);
-    // return this.db.list(this.getCurrentPath(), ref => ref.limitToFirst(4)); //entfernen
+    return this.db.list(this.getCurrentPath(), ref => ref.limitToFirst(4)); // for testing with only a few products
     return this.db.list(this.getCurrentPath());
   }
 
