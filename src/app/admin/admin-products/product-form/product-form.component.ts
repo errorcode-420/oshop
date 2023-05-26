@@ -14,6 +14,7 @@ import { CancelPopupComponent } from '../../../shared/components/dialogs/cancel-
 import { EditProductPopupComponent } from '../../../shared/components/dialogs/edit-product-popup/edit-product-popup.component';
 import { fade } from 'src/app/shared/services/animation.service';
 import { urlOrPathValidator } from '../../../shared/services/custom-validator.service';
+import { CustomValidators } from 'ng2-validation';
 
 @Component({
   selector: 'product-form',
@@ -69,7 +70,15 @@ export class ProductFormComponent implements OnDestroy {
       title: ['', Validators.required],
       price: ['', [Validators.required, Validators.pattern(/^[0-9]+(\.[0-9]{1,2})?$/)]],
       category: ['', Validators.required],
-      imageUrl: ['', [Validators.required, Validators.minLength(6), urlOrPathValidator]],
+      imageUrl: [
+        '',
+        [
+          Validators.required, 
+          Validators.minLength(6), 
+          CustomValidators.url,
+          // urlOrPathValidator
+        ]
+      ],
     });
   }  
   

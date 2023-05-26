@@ -26,7 +26,6 @@ import { CheckOutFormComponent } from './shopping/components/orders/check-out-fo
     AngularFireModule.initializeApp(environment.firebaseConfig),
     RouterModule.forRoot([
       { path: '', component: ProductsComponent },
-      { path: 'check-out', component: CheckOutFormComponent },
       { path: 'login', component: LoginComponent },
     ]),
     BrowserAnimationsModule   

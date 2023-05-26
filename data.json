@@ -55,7 +55,7 @@
         "products": 5.5,
         "total": 10.5
       },
-      "reference": "h5vxw4z0",
+      "reference": "MR420Y",
       "uid": "Df3T5W9z9yd8uKTChOrQzG826743"
     },
     "-NVjVXMo3oE_4Wqc1nBs": {
@@ -63,9 +63,9 @@
         "city": "Liverpool",
         "firstName": "Moh",
         "lastName": "Sallah",
-        "number": "11",
-        "street": "Liverstreet",
-        "zip": "1111"
+        "number": "1",
+        "street": "Anfield Road",
+        "zip": "411"
       },
       "date": "2023.05.18 17:37",
       "items": [
@@ -116,7 +116,7 @@
         "products": 8.25,
         "total": 13.25
       },
-      "reference": "ywaphadv",
+      "reference": "YV56HA",
       "uid": "nvaq5W9z9nh8uKTChOrQzG891s43"
     },
     "-NVjVzzUZLZ5fn1S1GvD": {
@@ -167,7 +167,7 @@
         "products": 6,
         "total": 11
       },
-      "reference": "o5pvgnbi",
+      "reference": "O5TR6U",
       "uid": "r5ubgW9z9yd8ugrChOrQzG89Hs43"
     },
     "-NVjWZ2LXxxxzJq9A0hO": {
@@ -198,7 +198,7 @@
         "products": 160,
         "total": 160
       },
-      "reference": "g0nsn9sn",
+      "reference": "GON0TE",
       "uid": "nfdq5Wdz9yd8uKTChOrQzG89Hs43"
     },
     "-NVjXGv0iqAEjPh1NHRo": {
@@ -208,7 +208,7 @@
         "lastName": "the sailor",
         "number": "123",
         "street": "Bootsstrasse",
-        "zip": "44654"
+        "zip": "16055"
       },
       "date": "2023.05.18 17:44",
       "items": [
@@ -229,7 +229,7 @@
         "products": 50,
         "total": 50
       },
-      "reference": "rmi9hsn5",
+      "reference": "RMT7SE",
       "uid": "n1dq5W9z9yd8uKTChOrQzG89Hs43"
     },
     "-NVjZFMDyesL3aLSdoXR": {
@@ -239,7 +239,7 @@
         "lastName": "Blume",
         "number": "3",
         "street": "Duesseldorfstrasse",
-        "zip": "40210"
+        "zip": "40213"
       },
       "date": "2023.05.18 17:53",
       "items": [
@@ -260,343 +260,9 @@
         "products": 4,
         "total": 9
       },
-      "reference": "f3tnvftc",
+      "reference": "F3LD7F",
       "uid": "n32q5W9z9yd8uKTChOrQzG89Hs43"
-    },
-    "-NW21E7n2PyNScCiWYia": {
-      "address": {
-        "city": "hfgdhfg",
-        "firstName": "ghjhgjg",
-        "lastName": "jghjgh",
-        "number": "45645",
-        "street": "jhgjghjg",
-        "zip": "456456"
-      },
-      "date": "2023.05.22 12:37",
-      "itemsCount": 0,
-      "prices": {
-        "delivery": 5,
-        "products": 0,
-        "total": 5
-      },
-      "reference": "VPSJXYB3",
-      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
-    },
-    "-NW229vcQ9DqlTMpiutX": {
-      "address": {
-        "city": "mgjhmhj",
-        "firstName": "hjghjghj",
-        "lastName": "jghjghj",
-        "number": "76",
-        "street": "jgjghj",
-        "zip": "4564"
-      },
-      "date": "2023.05.22 12:41",
-      "items": [
-        {
-          "product": {
-            "category": "nuts",
-            "id": "-PwSrOUFRBMDaJaHRTpep",
-            "imageUrl": "/assets/images/products/almonds.jpg",
-            "price": "2.90",
-            "title": "Almonds"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "category": "fruits",
-            "id": "-kbA0xcfP4npNO9ZlvtVK",
-            "imageUrl": "/assets/images/products/apple.jpg",
-            "price": 2,
-            "title": "Apple"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "category": "fruits",
-            "id": "-6GlJcunZ1J9JGM7FaRaW",
-            "imageUrl": "/assets/images/products/avacado.jpg",
-            "price": 1.75,
-            "title": "Avacado"
-          },
-          "quantity": 1
-        }
-      ],
-      "itemsCount": 3,
-      "prices": {
-        "delivery": 5,
-        "products": 6.65,
-        "total": 11.65
-      },
-      "reference": "ZTJOV1GI",
-      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
-    },
-    "-NW22GBUhp8S2kp9Q8wC": {
-      "address": {
-        "city": "jghjghjghj",
-        "firstName": "hrhrth",
-        "lastName": "hfghfgh",
-        "number": "456",
-        "street": "hfghfghfg",
-        "zip": "45645645"
-      },
-      "date": "2023.05.22 12:41",
-      "items": [
-        {
-          "product": {
-            "category": "nuts",
-            "id": "-PwSrOUFRBMDaJaHRTpep",
-            "imageUrl": "/assets/images/products/almonds.jpg",
-            "price": "2.90",
-            "title": "Almonds"
-          },
-          "quantity": 4
-        },
-        {
-          "product": {
-            "category": "fruits",
-            "id": "-kbA0xcfP4npNO9ZlvtVK",
-            "imageUrl": "/assets/images/products/apple.jpg",
-            "price": 2,
-            "title": "Apple"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "category": "seasonings",
-            "id": "-MKw6x6HtzyjAlTn0czD3",
-            "imageUrl": "/assets/images/products/cinnamon-sticks.jpg",
-            "price": 0.5,
-            "title": "Cinnamon Sticks"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "category": "seasonings",
-            "id": "-2MkawLUJhwGya5ql53Dn",
-            "imageUrl": "/assets/images/products/coriander-seeds.jpg",
-            "price": 0.5,
-            "title": "Coriander Seeds"
-          },
-          "quantity": 1
-        }
-      ],
-      "itemsCount": 7,
-      "prices": {
-        "delivery": 5,
-        "products": 14.6,
-        "total": 19.6
-      },
-      "reference": "W689WDE3",
-      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
-    },
-    "-NW2bQy3eqmOuTtJpRD1": {
-      "address": {
-        "city": "fdgfdgdf",
-        "firstName": "gfdgdfgdf",
-        "lastName": "dfgdfgdf",
-        "number": "42423",
-        "street": "gdfgdfgdf",
-        "zip": "423423"
-      },
-      "date": "2023.05.22 15:19",
-      "items": [
-        {
-          "product": {
-            "category": "nuts",
-            "id": "-PwSrOUFRBMDaJaHRTpep",
-            "imageUrl": "/assets/images/products/almonds.jpg",
-            "price": "2.90",
-            "title": "Almonds"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "category": "fruits",
-            "id": "-Krvs7RuXkSiDZvBZmey",
-            "imageUrl": "/assets/images/products/banana.jpg",
-            "price": 1.8,
-            "title": "Banana"
-          },
-          "quantity": 3
-        },
-        {
-          "product": {
-            "category": "vegetables",
-            "id": "-NVoJjwoSm-ZAz32gPmC",
-            "imageUrl": "/assets/images/products/broccoli.jpg",
-            "price": "1.60",
-            "title": "Broccoli"
-          },
-          "quantity": 3
-        }
-      ],
-      "itemsCount": 7,
-      "prices": {
-        "delivery": 5,
-        "products": 13.100000000000001,
-        "total": 18.1
-      },
-      "reference": "KJ02J4O8",
-      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
-    },
-    "-NW2j0OtC2ZKERwFJjEo": {
-      "address": {
-        "city": "xfhnf",
-        "firstName": "hzhtzh",
-        "lastName": "hgfhfghf",
-        "number": "56",
-        "street": "hztht",
-        "zip": "6456"
-      },
-      "date": "2023.05.22 15:52",
-      "items": [
-        {
-          "product": {
-            "category": "fruits",
-            "id": "-6GlJcunZ1J9JGM7FaRaW",
-            "imageUrl": "/assets/images/products/avacado.jpg",
-            "price": 1.75,
-            "title": "Avacado"
-          },
-          "quantity": 3
-        }
-      ],
-      "itemsCount": 3,
-      "prices": {
-        "delivery": 5,
-        "products": 5.25,
-        "total": 10.25
-      },
-      "reference": "DC2O1FTZ",
-      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
-    },
-    "-NW34EdMSoIZDrPm7Ex9": {
-      "address": {
-        "city": "vcxvxcv",
-        "firstName": "gfddfg",
-        "lastName": "dfgdf",
-        "number": "32432",
-        "street": "dsfdsfsd",
-        "zip": "23434"
-      },
-      "date": "2023.05.22 17:30",
-      "items": [
-        {
-          "product": {
-            "category": "fruits",
-            "id": "-6GlJcunZ1J9JGM7FaRaW",
-            "imageUrl": "/assets/images/products/avacado.jpg",
-            "price": 1.75,
-            "title": "Avacado"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "category": "seasonings",
-            "id": "-BKikSXFFd43f7mZf2iwK",
-            "imageUrl": "/assets/images/products/saffron.jpg",
-            "price": 3,
-            "title": "Saffron"
-          },
-          "quantity": 1
-        }
-      ],
-      "itemsCount": 2,
-      "prices": {
-        "delivery": 5,
-        "products": 4.75,
-        "total": 9.75
-      },
-      "reference": "2KOIQL7V",
-      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
-    },
-    "-NW3MCWnU8BCdV1ZUGN_": {
-      "address": {
-        "city": "dsfsdfsd",
-        "firstName": "dfsdf",
-        "lastName": "fdsfsd",
-        "number": "4234",
-        "street": "fdsfsdf",
-        "zip": "234234"
-      },
-      "date": "2023.05.22 18:48",
-      "itemsCount": 0,
-      "prices": {
-        "delivery": 5,
-        "products": 0,
-        "total": 5
-      },
-      "reference": "KHQ6CQ94",
-      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
-    },
-    "-NW3RmsIneouzwe1lqZr": {
-      "address": {
-        "city": "gdfgdfg",
-        "firstName": "gfhgfh",
-        "lastName": "gfhhfgh",
-        "number": "453",
-        "street": "hgfhfgh",
-        "zip": "345435"
-      },
-      "date": "2023.05.22 19:12",
-      "items": [
-        {
-          "product": {
-            "category": "fruits",
-            "id": "-6GlJcunZ1J9JGM7FaRaW",
-            "imageUrl": "/assets/images/products/avacado.jpg",
-            "price": 1.75,
-            "title": "Avacado"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "category": "nuts",
-            "id": "-0wdYUcrEN3OJefxiD7oG",
-            "imageUrl": "/assets/images/products/cashew.jpg",
-            "price": "2.80",
-            "title": "Cashews"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "category": "seasonings",
-            "id": "-2MkawLUJhwGya5ql53Dn",
-            "imageUrl": "/assets/images/products/coriander-seeds.jpg",
-            "price": 0.5,
-            "title": "Coriander Seeds"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "category": "fruits",
-            "id": "-DTpMmheNeMs5jLAB56JT",
-            "imageUrl": "/assets/images/products/kiwi.jpg",
-            "price": "1.80",
-            "title": "Kiwi"
-          },
-          "quantity": 1
-        }
-      ],
-      "itemsCount": 4,
-      "prices": {
-        "delivery": 5,
-        "products": 6.85,
-        "total": 11.85
-      },
-      "reference": "0O9H3CO2",
-      "uid": "n5uq5W9z9yd8uKTChOrQzG89Hs43"
-    }
+    }  
   },
   "products": {
     "-KrqgOLs07ZkbapP4EGi": {

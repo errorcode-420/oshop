@@ -3,7 +3,7 @@
 
     <div class="card-header py-3">
       <h2 *ngIf="id" class="mb-0">Edit Product</h2>
-	  <h2 *ngIf="!id" class="mb-0">Add Product</h2>
+	  <h2 *ngIf="!id" class="mb-0">Add New Product To The Shop</h2>
     </div>	
 
     <div class="card-body">
@@ -19,7 +19,8 @@
 								matInput
 								formControlName="title"
 								[(ngModel)]="p.title"
-								matTooltip="Enter product title">
+								matTooltip="Enter product title"
+								placeholder="Herbs">
 							<mat-error *ngIf="productForm.controls['title'].invalid && productForm.controls['title'].touched">
 								<span *ngIf="productForm.controls['title'].errors?.['required']">Title is required.</span>
 							</mat-error>
@@ -33,7 +34,8 @@
 								formControlName="price" 
 								[(ngModel)]="p.price" 
 								(blur)="formatPriceValue()"
-								matTooltip="Enter product price">
+								matTooltip="Enter product price"
+								placeholder="4.20">
 							<mat-error *ngIf="productForm.controls['price'].invalid && productForm.controls['price'].touched">
 							  <span *ngIf="productForm.controls['price'].errors?.['required']">Price is required.</span>
 							  <span *ngIf="productForm.controls['price'].errors?.['pattern']">Price should be 0 or higher.</span>
@@ -45,7 +47,8 @@
 							<mat-select
 								[(ngModel)]="currentProduct.category"
 								formControlName="category"
-								matTooltip="Select product category">
+								matTooltip="Select product category"
+								placeholder="Seasonings and Spices">
 							<mat-option
 								*ngFor="let c of categories"
 								[value]="c.id"
@@ -63,7 +66,9 @@
 							<input
 								matInput formControlName="imageUrl"
 								[(ngModel)]="p.imageUrl"
-								matTooltip="Enter image URL">
+								matTooltip="Enter image URL"
+								placeholder="https://cdn.pixabay.com/photo/2016/03/10/18/44/top-view-1248955_1280.jpg">
+								
 							<mat-error *ngIf="productForm.controls['imageUrl'].invalid && productForm.controls['imageUrl'].touched">
 								<span *ngIf="productForm.controls['imageUrl'].errors?.['required']">Image URL is required.</span>
 								<span *ngIf="productForm.controls['imageUrl'].errors?.['url']">

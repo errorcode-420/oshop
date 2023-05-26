@@ -56,7 +56,7 @@ export class CheckOutFormComponent {
       street: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Zßöäü ]*')]),
       number: new FormControl('', [Validators.required, Validators.pattern('.*[0-9].*')]),
       city: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Zßöäü ]*')]),
-      zip: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{4,8}$')]),
+      zip: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{3,8}$')]),
     });
   }
 
